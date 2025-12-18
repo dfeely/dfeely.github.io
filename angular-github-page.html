@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular on GitHub Pages</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .tasks-list {
+            margin-top: 30px;
+        }
+
+        .task-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .task-item:hover {
+            background: #e9ecef;
+        }
+
+        .task-text {
+            flex: 1;
+            color: #333;
+        }
+
+        .task-text.completed {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .delete-btn {
+            background: #dc3545;
+            padding: 8px 16px;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .delete-btn:hover {
+            background: #c82333;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #999;
+            padding: 40px;
+            font-style: italic;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .stat {
+            flex: 1;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body ng-app="todoApp" ng-controller="TodoController">
+    <div class="container">
+        <h1>📝 Task Manager</h1>
+        <p class="subtitle">Powered by Angular on GitHub Pages</p>
+
+        <div class="input-group">
+            <label for="taskInput">Add a new task:</label>
+            <input 
+                type="text" 
+                id="taskInput"
+                ng-model="newTask" 
+                placeholder="Enter your task here..."
+                ng-keyup="$event.keyCode == 13 && addTask()">
+        </div>
+
+        <button ng-click="addTask()">Add Task</button>
+        <button ng-click="clearCompleted()" ng-show="tasks.length > 0">Clear Completed</button>
+
+        <div class="tasks-list">
+            <div ng-show="tasks.length === 0" class="empty-state">
+                No tasks yet. Add one above to get started! 🚀
+            </div>
+
+            <div ng-repeat="task in tasks" class="task-item">
+                <span class="task-text" 
+                      ng-class="{completed: task.completed}"
+                      ng-click="toggleTask(task)">
+                    {{task.text}}
+                </span>
+                <button class="delete-btn" ng-click="deleteTask($index)">Delete</button>
+            </div>
+        </div>
+
+        <div class="stats" ng-show="tasks.length > 0">
+            <div class="stat">
+                <div class="stat-number">{{tasks.length}}</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">{{getCompletedCount()}}</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">{{getRemainingCount()}}</div>
+                <div class="stat-label">Remaining</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        angular.module('todoApp', [])
+            .controller('TodoController', function($scope) {
+                $scope.tasks = [];
+                $scope.newTask = '';
+
+                $scope.addTask = function() {
+                    if ($scope.newTask.trim()) {
+                        $scope.tasks.push({
+                            text: $scope.newTask,
+                            completed: false
+                        });
+                        $scope.newTask = '';
+                    }
+                };
+
+                $scope.deleteTask = function(index) {
+                    $scope.tasks.splice(index, 1);
+                };
+
+                $scope.toggleTask = function(task) {
+                    task.completed = !task.completed;
+                };
+
+                $scope.clearCompleted = function() {
+                    $scope.tasks = $scope.tasks.filter(function(task) {
+                        return !task.completed;
+                    });
+                };
+
+                $scope.getCompletedCount = function() {
+                    return $scope.tasks.filter(function(task) {
+                        return task.completed;
+                    }).length;
+                };
+
+                $scope.getRemainingCount = function() {
+                    return $scope.tasks.filter(function(task) {
+                        return !task.completed;
+                    }).length;
+                };
+            });
+    </script>
+</body>
+</html>
