@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot Test Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #eef3fa;
+      --ink:       #0d1b2e;
+      --accent:    #1a6ef5;
+      --muted:     #5a6f8a;
+      --card:      #f7faff;
+      --border:    #c4d4e8;
+      --mono:      'DM Mono', monospace;
+      --serif:     'Fraunces', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--serif);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Noise texture overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+      background: var(--card);
+    }
+
+    .logo {
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .badge {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.25em 0.7em;
+      border-radius: 2px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 6rem auto 0;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 540px;
+      margin: 0 auto 3rem;
+    }
+
+    /* ── Script card ── */
+    .script-card {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto 5rem;
+      padding: 0 2rem;
+    }
+
+    .card-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .code-block {
+      background: #0a1628;
+      color: #c8dff8;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      line-height: 1.7;
+      padding: 1.6rem 2rem;
+      border-radius: 4px;
+      border-left: 3px solid var(--accent);
+      overflow-x: auto;
+      white-space: pre;
+      position: relative;
+    }
+
+    .code-block .attr-name  { color: #7ec8e3; }
+    .code-block .attr-value { color: #b5e8a0; }
+    .code-block .tag        { color: #f0a070; }
+    .code-block .comment    { color: #5a6272; font-style: italic; }
+
+    /* ── Feature grid ── */
+    .features {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 7rem;
+      padding: 0 2rem;
+    }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .feature-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .feature h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* ── Instructions ── */
+    .instructions {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto 8rem;
+      padding: 0 2rem;
+      border-top: 1px solid var(--border);
+      padding-top: 3rem;
+    }
+
+    .instructions h2 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .steps li::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--accent);
+      min-width: 2rem;
+      padding-top: 0.15rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border);
+      padding: 1.25rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+      position: relative;
+      z-index: 1;
+      background: var(--card);
+    }
+
+    /* ── Animate in ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero, .script-card, .features, .instructions {
+      animation: fadeUp 0.6s ease both;
+    }
+    .script-card  { animation-delay: 0.1s; }
+    .features     { animation-delay: 0.18s; }
+    .instructions { animation-delay: 0.26s; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Ireland<span>AI</span> Chat</div>
+    <span class="badge">Test Page</span>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <p class="eyebrow">Chatbot Integration · Test Harness</p>
+      <h1>Does the widget <em>load?</em></h1>
+      <p class="subtitle">
+        This page embeds the external chatbot script and gives it a realistic
+        environment to initialise in. Open the page in a browser and look for
+        the chat button in the bottom-right corner.
+      </p>
+    </section>
+
+    <section class="script-card">
+      <p class="card-label">Embedded script tag</p>
+      <div class="code-block"><span class="tag">&lt;script</span>
+  <span class="attr-name">defer</span>
+  <span class="attr-name">src</span>=<span class="attr-value">"https://irelandaichat.com/vendor/chatbot/js/external-chatbot.js"</span>
+  <span class="attr-name">data-chatbot-uuid</span>=<span class="attr-value">"b471a959-ce14-4280-872e-02078fee92ea"</span>
+  <span class="attr-name">data-iframe-width</span>=<span class="attr-value">"420"</span>
+  <span class="attr-name">data-iframe-height</span>=<span class="attr-value">"745"</span>
+  <span class="attr-name">data-language</span>=<span class="attr-value">"en"</span>
+<span class="tag">&gt;&lt;/script&gt;</span></div>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <div class="feature-icon">💬</div>
+        <h3>Widget trigger</h3>
+        <p>Look for a floating chat button, typically in the bottom-right corner of the viewport.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📐</div>
+        <h3>420 × 745 px</h3>
+        <p>The iframe will open at the configured dimensions when the trigger is clicked.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌐</div>
+        <h3>Language: en</h3>
+        <p>The chatbot is initialised in English via the <code>data-language</code> attribute.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔑</div>
+        <h3>UUID bound</h3>
+        <p>The bot identity is tied to <code>b471a959…</code> — check the network tab to confirm the correct bot loads.</p>
+      </div>
+    </section>
+
+    <section class="instructions">
+      <h2>What to check</h2>
+      <ol class="steps">
+        <li>Open this file in a browser (a local server is fine; <code>python -m http.server</code> works).</li>
+        <li>Open DevTools → Network and filter by the script filename to confirm it downloaded with HTTP 200.</li>
+        <li>Verify a chat icon appears in the bottom-right corner within a second or two of page load.</li>
+        <li>Click the icon — the iframe should open at 420 × 745 px and the bot should greet you in English.</li>
+        <li>Check the Console tab for any JS errors that might indicate a misconfigured UUID or blocked domain.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>chatbot-test.html</span>
+    <span>uuid: b471a959-ce14-4280-872e-02078fee92ea</span>
+  </footer>
+
+  <!-- ✅ The script under test -->
+  <script
+    defer
+    src="https://irelandaichat.com/vendor/chatbot/js/external-chatbot.js"
+    data-chatbot-uuid="b471a959-ce14-4280-872e-02078fee92ea"
+    data-iframe-width="420"
+    data-iframe-height="745"
+    data-language="en"
+  ></script>
+
+</body>
+</html>
