@@ -10984,3 +10984,16 @@ section.resume-section .resume-section-content {
   margin: 0 auto 2rem;
   border: 0.35rem solid rgba(31, 78, 156, 0.2);
 }
+
+/* Custom: blog */
+.blog-section { align-items: flex-start; }
+.blog-card .h3 a { color: #212529; text-decoration: none; }
+.blog-card .h3 a:hover { color: #1f4e9c; text-decoration: underline; }
+.blog-card .read-more { font-weight: 800; text-decoration: none; }
+.post-meta { color: #6c757d; font-size: 0.95rem; }
+.post-body { max-width: 46rem; }
+.post-body h2 { font-size: 1.6rem; margin-top: 2.25rem; margin-bottom: 0.75rem; }
+.post-body h2.h4 { font-size: 1.4rem; }
+.post-body p, .post-body li { line-height: 1.7; }
+.post-body li { margin-bottom: 0.5rem; }
+#sideNav .navbar-nav .nav-item .nav-link.active { color: #fff; }

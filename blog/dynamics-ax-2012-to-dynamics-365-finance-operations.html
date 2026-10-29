@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Dynamics AX 2012 to Dynamics 365 Finance and Operations: How to Plan the Move | Declan Feely</title>
+        <meta name="description" content="A practical guide to planning a move from Dynamics AX 2012 to Dynamics 365 Finance and Operations: scope, customisations, data, integrations, reporting and cutover." />
+        <meta name="author" content="Declan Feely" />
+        <link rel="canonical" href="https://www.feelyconsultants.com/blog/dynamics-ax-2012-to-dynamics-365-finance-operations.html" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Dynamics AX 2012 to Dynamics 365 Finance and Operations: How to Plan the Move | Declan Feely" />
+        <meta property="og:description" content="A practical guide to planning a move from Dynamics AX 2012 to Dynamics 365 Finance and Operations: scope, customisations, data, integrations, reporting and cutover." />
+        <meta property="og:url" content="https://www.feelyconsultants.com/blog/dynamics-ax-2012-to-dynamics-365-finance-operations.html" />
+        <meta property="og:image" content="https://www.feelyconsultants.com/assets/img/profile.jpg" />
+        <meta name="twitter:card" content="summary" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Dynamics AX 2012 to Dynamics 365 Finance and Operations: How to Plan the Move", "description": "A practical guide to planning a move from Dynamics AX 2012 to Dynamics 365 Finance and Operations: scope, customisations, data, integrations, reporting and cutover.", "datePublished": "2026-10-28", "dateModified": "2026-10-28", "author": {"@type": "Person", "name": "Declan Feely", "url": "https://www.feelyconsultants.com/"}, "publisher": {"@type": "Organization", "name": "Feely Software Consultants", "url": "https://www.feelyconsultants.com/"}, "mainEntityOfPage": "https://www.feelyconsultants.com/blog/dynamics-ax-2012-to-dynamics-365-finance-operations.html"}</script>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand" href="../index.html">
+                <span class="d-block d-lg-none">Declan Feely</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="Declan Feely" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#erp">ERP &amp; Enterprise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#engineering">Software Engineering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#data-ai">Data &amp; AI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../blog/index.html">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-0">
+            <section class="resume-section blog-section" id="post">
+                <div class="resume-section-content">
+                    <article class="post-body">
+                        <p class="post-meta mb-3"><a href="index.html">&larr; All articles</a></p>
+                        <h1 class="mb-2">Dynamics AX 2012 to Dynamics 365 Finance and Operations: How to Plan the Move</h1>
+                        <div class="post-meta mb-4">By Declan Feely · <time datetime="2026-10-28">28 October 2026</time></div>
+
+<p class="lead">Moving from Dynamics AX 2012 to Dynamics 365 Finance and Operations is often described as an upgrade. In practice it is closer to a re-implementation that carries your business processes, data and lessons learned forward. Treating it that way from the start avoids most of the surprises.</p>
+
+<h2>1. Decide what the business needs, not just what AX does today</h2>
+<p>Start with the processes, not the code. Walk each finance, supply chain and warehouse process with the people who run it and ask what still earns its place. Years of AX 2012 use usually leave behind workarounds, duplicate reports and customisations that exist because of a limit that no longer applies. The move is the cheapest moment to drop them.</p>
+
+<h2>2. Triage every customisation</h2>
+<p>AX 2012 projects often relied on overlayering the base application. Dynamics 365 Finance and Operations uses an extension model instead, so each customisation needs a decision:</p>
+<ul>
+<li><strong>Retire it</strong> if the business no longer uses it.</li>
+<li><strong>Replace it with standard functionality</strong> where Dynamics 365 now does the job out of the box.</li>
+<li><strong>Rebuild it as an extension</strong> where it still gives real business value.</li>
+</ul>
+<p>Build a register of every customisation, who uses it and what it costs to rebuild. It becomes the backbone of your scope and your estimate.</p>
+
+<h2>3. Choose your data approach early</h2>
+<p>There is no single right answer for data. Some programmes use Microsoft's data upgrade path for AX 2012. Others migrate a defined set of master data, open transactions and balances into a clean environment and archive the history. The choice affects cost, timeline and how much legacy structure you carry over, so make it early and make it with finance and audit in the room. See my notes on <a href="erp-data-migration-approach.html">a practical approach to ERP data migration</a> for the detail on validation and reconciliation.</p>
+
+<h2>4. Plan integrations as a workstream of their own</h2>
+<p>AX 2012 integrations built on the Application Integration Framework (AIF), file drops and direct database access do not carry across. In Dynamics 365 you will typically use data entities, OData, custom services, Power Automate and, where it fits, dual-write with Dataverse. List every inbound and outbound interface, including warehouse systems such as SAP WMS and EDI partners, and decide for each whether to rebuild, replace or retire it.</p>
+
+<h2>5. Rethink reporting</h2>
+<p>SSRS reports can be rebuilt, but many organisations take the chance to move management reporting into Power BI on top of a governed data layer such as Azure SQL or Azure Data Lake. Agree which reports are operational (stay close to the ERP) and which are analytical (move to the data platform) before development starts.</p>
+
+<h2>6. Set up delivery discipline from day one</h2>
+<p>Dynamics 365 Finance and Operations rewards teams that use proper engineering practice: source control, build pipelines in Azure DevOps, automated regression testing and a clear environment strategy. Setting this up in the first weeks, not the last, makes every later phase quicker and safer.</p>
+
+<h2>7. Rehearse the cutover</h2>
+<p>Run several mock migrations and at least one full cutover rehearsal against the real timeline. Agree go and no-go criteria in advance, define who signs off the opening balances, and plan hypercare so that finance can close the first period with support on hand.</p>
+
+<h2>What to settle before you commit to a plan</h2>
+<ul>
+<li>A list of processes that stay, change or go.</li>
+<li>A customisation register with a retire, replace or rebuild decision for each item.</li>
+<li>A data approach agreed with finance and audit.</li>
+<li>An integration inventory with an owner for each interface.</li>
+<li>A governance model covering vendors, partners, change control and release management.</li>
+</ul>
+
+                        <hr class="my-5" />
+                        <h2 class="h4">Need help with a Dynamics 365 or ERP project?</h2>
+                        <p>I advise on architecture, implementation, integration and data migration for Dynamics 365 and enterprise platforms. Get in touch at <a href="mailto:declan@feelyconsultants.com">declan@feelyconsultants.com</a> or find me on <a href="https://www.linkedin.com/in/declanfeely/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+                        <h2 class="h4 mt-5">More articles</h2>
+                        <ul>
+                        <li><a href="erp-data-migration-approach.html">ERP Data Migration: A Practical Approach That Holds Up at Go-Live</a></li>
+                        <li><a href="business-central-crm-integration.html">Connecting Dynamics 365 CRM and Business Central: An Integration Guide</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>
