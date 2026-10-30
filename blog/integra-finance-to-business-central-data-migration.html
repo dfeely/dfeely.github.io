@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Integra Finance to Business Central: A Practical Data Migration Approach | Declan Feely</title>
+        <meta name="description" content="How to migrate from Integra Finance to Microsoft Dynamics 365 Business Central: scoping open transactions, mapping, SQL staging, configuration packages, reconciliation, sign-off and mid-year go-live." />
+        <meta name="author" content="Declan Feely" />
+        <link rel="canonical" href="https://www.feelyconsultants.com/blog/integra-finance-to-business-central-data-migration.html" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Integra Finance to Business Central: A Practical Data Migration Approach | Declan Feely" />
+        <meta property="og:description" content="How to migrate from Integra Finance to Microsoft Dynamics 365 Business Central: scoping open transactions, mapping, SQL staging, configuration packages, reconciliation, sign-off and mid-year go-live." />
+        <meta property="og:url" content="https://www.feelyconsultants.com/blog/integra-finance-to-business-central-data-migration.html" />
+        <meta property="og:image" content="https://www.feelyconsultants.com/assets/img/profile.jpg" />
+        <meta name="twitter:card" content="summary" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Integra Finance to Business Central: A Practical Data Migration Approach", "description": "How to migrate from Integra Finance to Microsoft Dynamics 365 Business Central: scoping open transactions, mapping, SQL staging, configuration packages, reconciliation, sign-off and mid-year go-live.", "datePublished": "2026-10-30", "dateModified": "2026-10-30", "author": {"@type": "Person", "name": "Declan Feely", "url": "https://www.feelyconsultants.com/"}, "publisher": {"@type": "Organization", "name": "Feely Software Consultants", "url": "https://www.feelyconsultants.com/"}, "mainEntityOfPage": "https://www.feelyconsultants.com/blog/integra-finance-to-business-central-data-migration.html"}</script>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand" href="../index.html">
+                <span class="d-block d-lg-none">Declan Feely</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="Declan Feely" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#erp">ERP &amp; Enterprise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#engineering">Software Engineering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#data-ai">Data &amp; AI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../blog/index.html">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-0">
+            <section class="resume-section blog-section" id="post">
+                <div class="resume-section-content">
+                    <article class="post-body">
+                        <p class="post-meta mb-3"><a href="index.html">&larr; All articles</a></p>
+                        <h1 class="mb-2">Integra Finance to Business Central: A Practical Data Migration Approach</h1>
+                        <div class="post-meta mb-4">By Declan Feely · <time datetime="2026-10-30">30 October 2026</time></div>
+
+<p class="lead">Moving a finance system from Integra Finance to Microsoft Dynamics 365 Business Central is as much a data exercise as a software one. Whatever the configuration of the new system, the finance team will judge the project by one thing on day one: do the balances, open invoices and purchase orders match what they had the day before? This article describes a practical, repeatable approach to Integra to Business Central data migration that works for finance teams of any size.</p>
+
+<h2>1. Migrate open transactions, not the whole database</h2>
+<p>The first decision shapes everything else. Rather than copying the full Integra database into Business Central, bring across <strong>master data and open transactional records</strong> only. History stays in the legacy system, or in an archive or reporting database, where it can still be queried. This reduces the volume to load, shrinks the reconciliation effort and keeps the new system clean.</p>
+<p>A typical Integra Finance to Business Central migration scope covers:</p>
+<ul>
+<li><strong>Purchases:</strong> open purchase orders, invoices created but not yet posted, payments not yet reconciled, and posted invoices and credits awaiting reconciliation.</li>
+<li><strong>Vendors and customers:</strong> all active and operational accounts.</li>
+<li><strong>Sales:</strong> open sales orders, unposted sales invoices, unallocated cash receipts and posted items awaiting reconciliation.</li>
+<li><strong>Expenses and purchase cards:</strong> open claims and unreconciled card transactions.</li>
+<li><strong>Banking:</strong> open, unreconciled bank transactions.</li>
+<li><strong>Fixed assets:</strong> assets still depreciating, plus fully depreciated assets that remain in use.</li>
+<li><strong>General ledger:</strong> the trial balance and month-by-month balances, including net changes.</li>
+<li><strong>New chart of accounts:</strong> fully mapped to the old chart, with every account that has had postings in the last two to three years.</li>
+<li><strong>Other setup data:</strong> item categories, employees, consolidation structure and budgets.</li>
+</ul>
+<p>Give every area a named business owner who will validate and sign off the migrated data, and a named technical analyst who will run the extraction. Ownership is the best defence against late surprises.</p>
+
+<h2>2. Follow a repeatable seven-step process</h2>
+<p>Scope will change as the project progresses, so the migration has to be re-runnable. Use the same seven steps every time:</p>
+<ol>
+<li><strong>Plan:</strong> define scope, tools, volumes, environments and owners.</li>
+<li><strong>Extract and cleanse:</strong> pull data from Integra and fix quality issues at source or in staging.</li>
+<li><strong>Transform:</strong> reshape data that does not map directly to Business Central.</li>
+<li><strong>Validate:</strong> check each extract against an agreed checklist, including data types and field lengths.</li>
+<li><strong>Map:</strong> link source fields to target fields, entity by entity. This is usually the hardest step.</li>
+<li><strong>Import:</strong> load validated data in packets using the Business Central data framework.</li>
+<li><strong>Verify after migration:</strong> confirm with the business what was imported and that it is accurate.</li>
+</ol>
+<p>Record every requirement in your work-tracking tool, such as Azure DevOps, so that the scope, decisions and changes have one visible home.</p>
+
+<h2>3. Build a mapping document for every entity</h2>
+<p>Integra is typically an on-premises application on SQL Server, and Business Central is a cloud product, so the field structures differ. For each entity, create a mapping document that says exactly which source column feeds which target field. A simple example: a source customer table with an ID, first name, last name and email maps to the Business Central customer with its No., Name, Contact and E-Mail fields.</p>
+<p>A good way to start is to create a configuration package in Business Central for the entity and export it to Excel. That template lists every target field. Map an Integra field to each one, have the business sign the mapping off, and then generate the SQL extract script from it.</p>
+
+<h2>4. Document your transformation rules</h2>
+<p>Some data will not move across as it is. Write each rule into the mapping document so it can be reviewed and repeated. Typical transformation rules include:</p>
+<ul>
+<li><strong>Concatenation:</strong> combining first and last name into one name field.</li>
+<li><strong>Formatting:</strong> converting date formats and normalising phone numbers, because Business Central will reject characters such as "/" or "+" in some fields.</li>
+<li><strong>Cleansing:</strong> removing duplicates and invalid entries, and replacing missing values with agreed defaults.</li>
+<li><strong>Value mapping:</strong> translating source values to Business Central codes, such as country codes and item categories.</li>
+<li><strong>Enrichment:</strong> calculating derived fields.</li>
+<li><strong>Validation and defaults:</strong> checking unique IDs, credit limits and payment terms, and setting defaults such as currency.</li>
+</ul>
+<p>Agree a cut-off for changes. Transformation requirements raised after user acceptance testing needs more development time and will move the delivery date, so make that trade-off visible to the project sponsor.</p>
+
+<h2>5. Use a SQL staging database</h2>
+<p>Create a dedicated migration database on the same server as the Integra database. Give the migration team owner rights on it and read-only access to Integra. Then:</p>
+<ul>
+<li>Write extraction scripts that copy data from Integra into staging tables.</li>
+<li>Shape each staging table to match the Excel template used for the matching Business Central configuration package.</li>
+<li>Run cleansing scripts in staging, not in the source, so the legacy system is never altered.</li>
+</ul>
+<p>Keeping extraction, cleansing and loading as separate steps makes problems much easier to find.</p>
+
+<h2>6. Automate the extract with Power Automate</h2>
+<p>Once data is cleansed in staging, a Power Automate flow per entity can produce the load files. Each flow connects to the staging database, runs the extraction procedure, clears and repopulates the staging table, writes the rows to a CSV or Excel file and saves it to a restricted folder that only the migration team can open. Date-stamp every file and replace the previous one so nobody loads stale data.</p>
+<p>Because each flow can be re-run on demand, producing a fresh set of files for a new rehearsal takes minutes rather than days.</p>
+
+<h2>7. Load with Business Central configuration packages</h2>
+<p>The Business Central configuration package is the standard route for loading migrated data. For each entity:</p>
+<ol>
+<li>Create a configuration package, with a consistent naming convention, and add the tables and fields to be imported.</li>
+<li>Check that field types and lengths match the data model.</li>
+<li>Import a small subset first and review the errors.</li>
+<li>Run <strong>Validate Package</strong> to find problems before anything is written.</li>
+<li>Run <strong>Apply Package</strong> to load the data, and then reconcile.</li>
+</ol>
+
+<h2>8. Reconcile in two rounds</h2>
+<p>Split the checking between the technical analyst and the business, so each person checks what they are best placed to judge.</p>
+<ul>
+<li><strong>Round one, technical analyst:</strong> record counts, required-field checks, data integrity, and for transactions the total record count and total value.</li>
+<li><strong>Round two, business user:</strong> a second count and integrity check on master data and, for transactions, a full reconciliation to legacy reports at general ledger level, or at vendor and customer level. Sub-ledger values must agree to the general ledger control accounts.</li>
+</ul>
+<p>Add consistency checks by sampling records at random in both systems, and ask users to create new transactions against the migrated master data to prove it works in practice. Record every check in a single workbook so there is an audit trail.</p>
+
+<h2>9. Get formal sign-off</h2>
+<p>Obtain sign-off from the technical lead, the project manager and each process owner at two points: when user acceptance testing is complete and the migration is ready to move to production, and again after the final cutover migration. Business users confirm data accuracy and usability, and the IT team confirms integrity, performance and security. Keep the signed checklist with the project records.</p>
+
+<h2>10. Plan for a mid-year go-live</h2>
+<p>A go-live at the start of the financial year is the easiest case. If you go live mid-year, expect more to migrate and more to reconcile. These areas need particular attention:</p>
+<ul>
+<li><strong>Purchase orders:</strong> organisations that keep orders open and draw down on them through the year may have well over a thousand open orders. Migrate partly spent, partly received and partly invoiced orders with their remaining values, and keep the order numbers the same.</li>
+<li><strong>Receivables:</strong> volumes can be several times higher in a busy month than a quiet one, and every outstanding debtor transaction needs to move across and reconcile.</li>
+<li><strong>Expenses and purchase cards:</strong> close and pay as many expenses as possible in the old system before cutover, and re-register every card in the new system.</li>
+<li><strong>Bank statements:</strong> load the last reconciled statement and the one before it, which helps reconcile open items.</li>
+<li><strong>Contracts:</strong> migrate an opening balance for each open contract so that multi-year spend remains traceable.</li>
+<li><strong>Fixed assets:</strong> do not change depreciation policy mid-year. If Business Central will use monthly depreciation, switch the legacy system to monthly in advance so the asset balances line up at migration.</li>
+<li><strong>Grants and other programmes:</strong> confirm how they are held, often through purchase orders, and include them explicitly in scope.</li>
+</ul>
+
+<h2>Checklist for an Integra Finance to Business Central migration</h2>
+<ul>
+<li>Scope limited to master data and open transactions, with history archived.</li>
+<li>A named business owner and technical analyst for every data area.</li>
+<li>A signed-off mapping document for every entity, with transformation rules.</li>
+<li>A staging database, scripted extracts and re-runnable Power Automate flows.</li>
+<li>Configuration packages validated before they are applied.</li>
+<li>Two rounds of reconciliation and a signed checklist.</li>
+<li>Multiple rehearsals before the real cutover.</li>
+</ul>
+<p>The same principles apply to other source systems. For the wider picture, read my guide to <a href="erp-data-migration-approach.html">ERP data migration</a>, and for connecting Business Central to customer systems after go-live, see <a href="business-central-crm-integration.html">Dynamics 365 CRM and Business Central integration</a>.</p>
+
+                        <hr class="my-5" />
+                        <h2 class="h4">Need help with a Dynamics 365 or ERP project?</h2>
+                        <p>I advise on architecture, implementation, integration and data migration for Dynamics 365 and enterprise platforms. Get in touch at <a href="mailto:declan@feelyconsultants.com">declan@feelyconsultants.com</a> or find me on <a href="https://www.linkedin.com/in/declanfeely/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+                        <h2 class="h4 mt-5">More articles</h2>
+                        <ul>
+                        <li><a href="dynamics-ax-2012-to-dynamics-365-finance-operations.html">Dynamics AX 2012 to Dynamics 365 Finance and Operations: How to Plan the Move</a></li>
+                        <li><a href="erp-data-migration-approach.html">ERP Data Migration: A Practical Approach That Holds Up at Go-Live</a></li>
+                        <li><a href="business-central-crm-integration.html">Connecting Dynamics 365 CRM and Business Central: An Integration Guide</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>
