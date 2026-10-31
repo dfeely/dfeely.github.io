@@ -78,6 +78,11 @@
 <li><strong>Verify after migration:</strong> confirm with the business what was imported and that it is accurate.</li>
 </ol>
 <p>Record every requirement in your work-tracking tool, such as Azure DevOps, so that the scope, decisions and changes have one visible home.</p>
+<figure class="post-figure">
+<img src="images/integra-business-central-migration-seven-steps.svg" width="960" height="380" alt="Diagram of the seven steps of the migration: plan, extract and cleanse, transform, validate, map, import and verify." loading="lazy" />
+<figcaption>The seven-step migration process, repeated for every rehearsal and the final cutover.</figcaption>
+</figure>
+
 
 <h2>3. Build a mapping document for every entity</h2>
 <p>Integra is typically an on-premises application on SQL Server, and Business Central is a cloud product, so the field structures differ. For each entity, create a mapping document that says exactly which source column feeds which target field. A simple example: a source customer table with an ID, first name, last name and email maps to the Business Central customer with its No., Name, Contact and E-Mail fields.</p>
@@ -107,6 +112,11 @@
 <h2>6. Automate the extract with Power Automate</h2>
 <p>Once data is cleansed in staging, a Power Automate flow per entity can produce the load files. Each flow connects to the staging database, runs the extraction procedure, clears and repopulates the staging table, writes the rows to a CSV or Excel file and saves it to a restricted folder that only the migration team can open. Date-stamp every file and replace the previous one so nobody loads stale data.</p>
 <p>Because each flow can be re-run on demand, producing a fresh set of files for a new rehearsal takes minutes rather than days.</p>
+<figure class="post-figure">
+<img src="images/integra-to-business-central-data-flow.svg" width="960" height="270" alt="Diagram showing data flowing from the Integra Finance SQL Server database to a staging database, through a Power Automate flow into a load file, then into Business Central." loading="lazy" />
+<figcaption>Data flow from Integra Finance to Business Central using a staging database, Power Automate and configuration packages.</figcaption>
+</figure>
+
 
 <h2>7. Load with Business Central configuration packages</h2>
 <p>The Business Central configuration package is the standard route for loading migrated data. For each entity:</p>
@@ -125,6 +135,11 @@
 <li><strong>Round two, business user:</strong> a second count and integrity check on master data and, for transactions, a full reconciliation to legacy reports at general ledger level, or at vendor and customer level. Sub-ledger values must agree to the general ledger control accounts.</li>
 </ul>
 <p>Add consistency checks by sampling records at random in both systems, and ask users to create new transactions against the migrated master data to prove it works in practice. Record every check in a single workbook so there is an audit trail.</p>
+<figure class="post-figure">
+<img src="images/two-round-reconciliation-and-sign-off.svg" width="960" height="300" alt="Diagram showing round one checks by the technical analyst, round two reconciliation by the business user, and then sign-off." loading="lazy" />
+<figcaption>Two rounds of reconciliation followed by formal sign-off.</figcaption>
+</figure>
+
 
 <h2>9. Get formal sign-off</h2>
 <p>Obtain sign-off from the technical lead, the project manager and each process owner at two points: when user acceptance testing is complete and the migration is ready to move to production, and again after the final cutover migration. Business users confirm data accuracy and usability, and the IT team confirms integrity, performance and security. Keep the signed checklist with the project records.</p>

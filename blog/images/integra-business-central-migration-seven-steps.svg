@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="960" height="380" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">The seven steps of an Integra Finance to Business Central data migration</title><desc id="d">Seven numbered steps: plan, extract and cleanse, transform, validate, map, import and verify, repeated for every rehearsal and the final cutover.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="380" fill="#ffffff"/>
+<rect x="20" y="30" width="205" height="108" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<circle cx="46" cy="58" r="14" fill="#1f4e9c"/>
+<text x="46" y="63" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="70" y="63" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="start">Plan</text>
+<text x="122.5" y="94" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">Scope, owners,</text>
+<text x="122.5" y="114" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">tools and volumes</text>
+<rect x="259" y="30" width="205" height="108" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<circle cx="285" cy="58" r="14" fill="#1f4e9c"/>
+<text x="285" y="63" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="309" y="63" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="start">Extract &amp; cleanse</text>
+<text x="361.5" y="94" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">Pull from Integra and</text>
+<text x="361.5" y="114" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">fix data quality</text>
+<rect x="498" y="30" width="205" height="108" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<circle cx="524" cy="58" r="14" fill="#1f4e9c"/>
+<text x="524" y="63" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="548" y="63" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="start">Transform</text>
+<text x="600.5" y="94" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">Reshape data to fit</text>
+<text x="600.5" y="114" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">Business Central</text>
+<rect x="737" y="30" width="205" height="108" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<circle cx="763" cy="58" r="14" fill="#1f4e9c"/>
+<text x="763" y="63" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="787" y="63" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="start">Validate</text>
+<text x="839.5" y="94" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">Types, lengths and</text>
+<text x="839.5" y="114" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">a signed checklist</text>
+<rect x="139" y="205" width="205" height="108" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<circle cx="165" cy="233" r="14" fill="#1f4e9c"/>
+<text x="165" y="238" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="189" y="238" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="start">Map</text>
+<text x="241.5" y="269" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">Source to target fields,</text>
+<text x="241.5" y="289" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">entity by entity</text>
+<rect x="378" y="205" width="205" height="108" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<circle cx="404" cy="233" r="14" fill="#1f4e9c"/>
+<text x="404" y="238" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<text x="428" y="238" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="start">Import</text>
+<text x="480.5" y="269" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">Load in packets with</text>
+<text x="480.5" y="289" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">configuration packages</text>
+<rect x="617" y="205" width="205" height="108" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<circle cx="643" cy="233" r="14" fill="#1f4e9c"/>
+<text x="643" y="238" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+<text x="667" y="238" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="start">Verify</text>
+<text x="719.5" y="269" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">Reconcile, test and</text>
+<text x="719.5" y="289" font-size="14" font-weight="400" fill="#212529" text-anchor="middle">get sign-off</text>
+<line x1="228" y1="84" x2="256" y2="84" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<line x1="467" y1="84" x2="495" y2="84" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<line x1="706" y1="84" x2="734" y2="84" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<path d="M839.5,138 L839.5,171 L241.5,171 L241.5,202" fill="none" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<line x1="347" y1="259" x2="375" y2="259" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<line x1="586" y1="259" x2="614" y2="259" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<text x="480.0" y="355" font-size="15" font-weight="600" fill="#5c6670" text-anchor="middle">Run the same seven steps for every rehearsal and for the final cutover.</text>
+</svg>

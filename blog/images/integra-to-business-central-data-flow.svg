@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 270" width="960" height="270" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Data flow from Integra Finance into Business Central</title><desc id="d">Data moves from the Integra Finance SQL Server database to a staging database, through a Power Automate flow into a dated load file, and then into Business Central using a configuration package.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="270" fill="#ffffff"/>
+<rect x="10.0" y="40" width="160" height="130" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="90.0" y="72" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Integra Finance</text>
+<text x="90.0" y="106" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">On-premises</text>
+<text x="90.0" y="126" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">SQL Server database</text>
+<rect x="30.0" y="140" width="120" height="22" rx="11" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="90.0" y="155" font-size="12" font-weight="600" fill="#5c6670" text-anchor="middle">Read-only access</text>
+<rect x="207.5" y="40" width="160" height="130" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="287.5" y="72" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Staging database</text>
+<text x="287.5" y="106" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Extract, cleanse</text>
+<text x="287.5" y="126" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">and transform</text>
+<rect x="227.5" y="140" width="120" height="22" rx="11" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="287.5" y="155" font-size="12" font-weight="600" fill="#5c6670" text-anchor="middle">Scripted, repeatable</text>
+<rect x="405.0" y="40" width="160" height="130" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="485.0" y="72" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Power Automate</text>
+<text x="485.0" y="106" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">One flow per entity,</text>
+<text x="485.0" y="126" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">re-run on demand</text>
+<rect x="425.0" y="140" width="120" height="22" rx="11" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="485.0" y="155" font-size="12" font-weight="600" fill="#5c6670" text-anchor="middle">Manually triggered</text>
+<rect x="602.5" y="40" width="160" height="130" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="682.5" y="72" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Load file</text>
+<text x="682.5" y="106" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Dated CSV or Excel in</text>
+<text x="682.5" y="126" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">a restricted folder</text>
+<rect x="622.5" y="140" width="120" height="22" rx="11" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="682.5" y="155" font-size="12" font-weight="600" fill="#5c6670" text-anchor="middle">Old file replaced</text>
+<rect x="800.0" y="40" width="160" height="130" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="880.0" y="72" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Business Central</text>
+<text x="880.0" y="106" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Validate, then apply</text>
+<text x="880.0" y="126" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">the package</text>
+<rect x="820.0" y="140" width="120" height="22" rx="11" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="880.0" y="155" font-size="12" font-weight="600" fill="#5c6670" text-anchor="middle">Errors reported</text>
+<line x1="173.0" y1="105" x2="204.5" y2="105" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<line x1="370.5" y1="105" x2="402.0" y2="105" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<line x1="568.0" y1="105" x2="599.5" y2="105" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<line x1="765.5" y1="105" x2="797.0" y2="105" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="10" y="200" width="940" height="44" rx="10" fill="#e8eef8"/>
+<text x="480.0" y="227" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">Every stage is scripted, so a fresh set of files for the next rehearsal takes minutes, not days.</text>
+</svg>

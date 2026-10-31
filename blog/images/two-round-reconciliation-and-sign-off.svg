@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Two rounds of reconciliation, then sign-off</title><desc id="d">Round one: the technical analyst checks counts, required fields, integrity and values. Round two: the business user reconciles to legacy reports. Then the technical lead, project manager and process owners sign off.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="300" fill="#ffffff"/>
+<rect x="15" y="35" width="270" height="230" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<rect x="15" y="35" width="270" height="46" rx="10" fill="#1f4e9c"/>
+<rect x="15" y="65" width="270" height="16" fill="#1f4e9c"/>
+<text x="150.0" y="65" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Round 1: Technical analyst</text>
+<circle cx="39" cy="110" r="4" fill="#1f4e9c"/>
+<text x="53" y="115" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Record counts</text>
+<circle cx="39" cy="146" r="4" fill="#1f4e9c"/>
+<text x="53" y="151" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Required-field checks</text>
+<circle cx="39" cy="182" r="4" fill="#1f4e9c"/>
+<text x="53" y="187" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Data integrity checks</text>
+<circle cx="39" cy="218" r="4" fill="#1f4e9c"/>
+<text x="53" y="223" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Total value of transactions</text>
+<line x1="291" y1="150" x2="344" y2="150" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="350" y="35" width="270" height="230" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<rect x="350" y="35" width="270" height="46" rx="10" fill="#1f4e9c"/>
+<rect x="350" y="65" width="270" height="16" fill="#1f4e9c"/>
+<text x="485.0" y="65" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Round 2: Business user</text>
+<circle cx="374" cy="110" r="4" fill="#1f4e9c"/>
+<text x="388" y="115" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Repeat counts and integrity</text>
+<circle cx="374" cy="146" r="4" fill="#1f4e9c"/>
+<text x="388" y="151" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Reconcile to legacy reports</text>
+<circle cx="374" cy="182" r="4" fill="#1f4e9c"/>
+<text x="388" y="187" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Sub-ledgers agree to GL control</text>
+<circle cx="374" cy="218" r="4" fill="#1f4e9c"/>
+<text x="388" y="223" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Test new transactions</text>
+<line x1="626" y1="150" x2="679" y2="150" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="685" y="35" width="270" height="230" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<rect x="685" y="35" width="270" height="46" rx="10" fill="#1f4e9c"/>
+<rect x="685" y="65" width="270" height="16" fill="#1f4e9c"/>
+<text x="820.0" y="65" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Sign-off</text>
+<circle cx="709" cy="110" r="4" fill="#1f4e9c"/>
+<text x="723" y="115" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Technical lead</text>
+<circle cx="709" cy="146" r="4" fill="#1f4e9c"/>
+<text x="723" y="151" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Project manager</text>
+<circle cx="709" cy="182" r="4" fill="#1f4e9c"/>
+<text x="723" y="187" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">Process owners</text>
+<circle cx="709" cy="218" r="4" fill="#1f4e9c"/>
+<text x="723" y="223" font-size="14.5" font-weight="400" fill="#212529" text-anchor="start">At UAT and after final cutover</text>
+</svg>

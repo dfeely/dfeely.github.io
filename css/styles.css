@@ -10997,3 +10997,8 @@ section.resume-section .resume-section-content {
 .post-body p, .post-body li { line-height: 1.7; }
 .post-body li { margin-bottom: 0.5rem; }
 #sideNav .navbar-nav .nav-item .nav-link.active { color: #fff; }
+
+/* Custom: blog figures */
+.post-figure { margin: 2rem 0; }
+.post-figure img { width: 100%; height: auto; border: 1px solid #dee2e6; border-radius: 0.5rem; background: #fff; }
+.post-figure figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: #6c757d; text-align: center; }
