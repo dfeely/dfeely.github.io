@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 250" width="960" height="250" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">The six steps of building a custom Jet Report</title><desc id="d">Define the reporting requirement, identify the Business Central data, define the business rules, build the Jet Report, validate against Business Central and make the report reusable. Defining the business rules is often the most important step.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="250" fill="#ffffff"/>
+<rect x="10.0" y="30" width="138" height="110" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="79.0" y="69.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Define</text>
+<text x="79.0" y="95.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">the reporting</text>
+<text x="79.0" y="113.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">requirement</text>
+<circle cx="26.0" cy="46" r="12" fill="#1f4e9c"/>
+<text x="26.0" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<line x1="150.0" y1="85" x2="168.4" y2="85" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="170.4" y="30" width="138" height="110" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="239.4" y="69.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Identify</text>
+<text x="239.4" y="95.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">the Business</text>
+<text x="239.4" y="113.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Central data</text>
+<circle cx="186.4" cy="46" r="12" fill="#1f4e9c"/>
+<text x="186.4" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<line x1="310.4" y1="85" x2="328.79999999999995" y2="85" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="330.8" y="30" width="138" height="110" rx="10" fill="#fdf1e3" stroke="#b45309" stroke-width="1.5"/>
+<text x="399.8" y="69.0" font-size="16" font-weight="700" fill="#b45309" text-anchor="middle">Define</text>
+<text x="399.8" y="95.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">the business</text>
+<text x="399.8" y="113.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">rules</text>
+<circle cx="346.8" cy="46" r="12" fill="#b45309"/>
+<text x="346.8" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<line x1="470.8" y1="85" x2="489.2" y2="85" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="491.20000000000005" y="30" width="138" height="110" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="560.2" y="69.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Build</text>
+<text x="560.2" y="95.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">the Jet</text>
+<text x="560.2" y="113.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Report</text>
+<circle cx="507.20000000000005" cy="46" r="12" fill="#1f4e9c"/>
+<text x="507.20000000000005" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<line x1="631.2" y1="85" x2="649.6" y2="85" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="651.6" y="30" width="138" height="110" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="720.6" y="69.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Validate</text>
+<text x="720.6" y="95.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">against Business</text>
+<text x="720.6" y="113.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Central</text>
+<circle cx="667.6" cy="46" r="12" fill="#1f4e9c"/>
+<text x="667.6" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<line x1="791.6" y1="85" x2="810.0" y2="85" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="812.0" y="30" width="138" height="110" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="881.0" y="78.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Make it</text>
+<text x="881.0" y="104.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">reusable</text>
+<circle cx="828.0" cy="46" r="12" fill="#1f4e9c"/>
+<text x="828.0" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<rect x="292.8" y="148" width="214" height="24" rx="12" fill="#fdf1e3" stroke="#b45309"/><text x="399.8" y="164.5" font-size="12.5" font-weight="600" fill="#b45309" text-anchor="middle">Often the most important step</text>
+<rect x="10" y="190" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="217.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">Start with the business question, not the Excel layout.</text>
+</svg>

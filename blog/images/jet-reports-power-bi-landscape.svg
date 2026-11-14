@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="960" height="360" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Where Jet Reports and Power BI fit around Business Central</title><desc id="d">Business Central handles transactions. Jet Reports provides Excel-based operational and financial reporting, Power BI provides interactive dashboards and analytics, and an Azure SQL or data platform covers enterprise-wide reporting needs.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="360" fill="#ffffff"/>
+<rect x="250" y="20" width="460" height="70" rx="10" fill="#1f4e9c" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="480.0" y="48.0" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Business Central</text>
+<text x="480.0" y="74.0" font-size="13.5" font-weight="400" fill="#ffffff" text-anchor="middle">Transactional processing</text>
+<rect x="10.0" y="150" width="290" height="120" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="155.0" y="185.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Jet Reports</text>
+<text x="155.0" y="211.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Excel-based operational</text>
+<text x="155.0" y="229.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">and financial reporting</text>
+<text x="155.0" y="247.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Finance can refresh</text>
+<line x1="155.0" y1="93" x2="155.0" y2="147" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="335.0" y="150" width="290" height="120" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="480.0" y="185.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Power BI</text>
+<text x="480.0" y="211.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Interactive dashboards,</text>
+<text x="480.0" y="229.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">visual analytics and</text>
+<text x="480.0" y="247.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">broader BI</text>
+<line x1="480.0" y1="93" x2="480.0" y2="147" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="660.0" y="150" width="290" height="120" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="805.0" y="185.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Azure SQL or data platform</text>
+<text x="805.0" y="211.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Enterprise-wide data</text>
+<text x="805.0" y="229.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">models and wider</text>
+<text x="805.0" y="247.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">reporting needs</text>
+<line x1="805.0" y1="93" x2="805.0" y2="147" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="10" y="300" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="327.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">Not one or the other: use each where it is strongest.</text>
+</svg>

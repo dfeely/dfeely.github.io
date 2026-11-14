@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBN117Z5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CWBN117Z5K');
+</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>How to Create a Custom Jet Report in Business Central | Declan Feely</title>
+        <meta name="description" content="How to build a custom Jet Report for Business Central: management P&amp;L, budget vs actual, dimension and sales reporting, a six-step process, and when to use Jet Reports or Power BI." />
+        <meta name="author" content="Declan Feely" />
+        <link rel="canonical" href="https://www.feelyconsultants.com/blog/custom-jet-report-business-central.html" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="How to Create a Custom Jet Report in Business Central | Declan Feely" />
+        <meta property="og:description" content="How to build a custom Jet Report for Business Central: management P&amp;L, budget vs actual, dimension and sales reporting, a six-step process, and when to use Jet Reports or Power BI." />
+        <meta property="og:url" content="https://www.feelyconsultants.com/blog/custom-jet-report-business-central.html" />
+        <meta property="og:image" content="https://www.feelyconsultants.com/assets/img/profile.jpg" />
+        <meta name="twitter:card" content="summary" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Create a Custom Jet Report in Business Central", "description": "How to build a custom Jet Report for Business Central: management P&L, budget vs actual, dimension and sales reporting, a six-step process, and when to use Jet Reports or Power BI.", "datePublished": "2026-11-14", "dateModified": "2026-11-14", "author": {"@type": "Person", "name": "Declan Feely", "url": "https://www.feelyconsultants.com/"}, "publisher": {"@type": "Organization", "name": "Feely Software Consultants", "url": "https://www.feelyconsultants.com/"}, "mainEntityOfPage": "https://www.feelyconsultants.com/blog/custom-jet-report-business-central.html"}</script>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand" href="../index.html">
+                <span class="d-block d-lg-none">Declan Feely</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="Declan Feely" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#erp">ERP &amp; Enterprise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#engineering">Software Engineering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#data-ai">Data &amp; AI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../blog/index.html">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-0">
+            <section class="resume-section blog-section" id="post">
+                <div class="resume-section-content">
+                    <article class="post-body">
+                        <p class="post-meta mb-3"><a href="index.html">&larr; All articles</a></p>
+                        <h1 class="mb-2">How to Create a Custom Jet Report in Business Central</h1>
+                        <div class="post-meta mb-4">By Declan Feely · <time datetime="2026-11-14">14 November 2026</time></div>
+
+<p class="lead">If your organisation uses Microsoft Dynamics 365 Business Central, there is a good chance that Finance or management will eventually ask for a report that isn&rsquo;t available out of the box: a management P&amp;L by dimension, a detailed sales analysis, a customer profitability report, a budget-versus-actual report or a monthly pack that combines several areas of Business Central. This is where Jet Reports can be particularly useful.</p>
+<p>Jet Reports lets users build Excel-based reports on Business Central data, including information from different modules, dimensions, companies and, where supported, third-party solutions. Jet Global lists Ireland among the countries supported for Business Central (<a href="https://support.jetglobal.com/hc/en-us/articles/4411204163735-Jet-Reports-D365-BC-Supported-Countries-and-Editions" target="_blank" rel="noopener">Jet Global Support</a>).</p>
+
+<h2>What is a Jet Report?</h2>
+<p>A Jet Report is an Excel report that retrieves information from your ERP system and presents it in a format users can refresh and reuse. Instead of exporting data from Business Central by hand every month, a well-designed Jet Report gives you a repeatable reporting process. A Finance team might build a monthly report containing:</p>
+<ul>
+<li>General ledger transactions, revenue and cost of sales</li>
+<li>Departmental expenditure and budget figures</li>
+<li>Customer and vendor information</li>
+<li>Business Central dimensions and multiple companies</li>
+<li>Period comparisons</li>
+</ul>
+<p>The report can then be refreshed whenever the underlying Business Central data changes.</p>
+
+<h2>Why use Jet Reports with Business Central?</h2>
+<p>Business Central holds a large amount of financial and operational information, but the standard reports don&rsquo;t necessarily match the way every organisation wants to analyse it. The problem is often not the availability of data. The problem is getting the data into the right business report.</p>
+<p>A Finance Director might ask for actual vs budget by department, month and account, with a year-to-date comparison and a variance percentage. A standard report may not present the information in exactly that format. A custom Jet Report can be designed around the organisation&rsquo;s reporting requirements.</p>
+
+<h2>Examples of custom Jet Reports</h2>
+
+<h3>1. Management P&amp;L</h3>
+<p>A management P&amp;L can be designed around the organisation&rsquo;s chart of accounts and dimensions. For example:</p>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr><th scope="col">Report line</th><th scope="col">Analysis</th></tr>
+</thead>
+<tbody>
+<tr><td>Revenue</td><td>By department</td></tr>
+<tr><td>Cost of sales</td><td>By department</td></tr>
+<tr><td>Operating costs</td><td>By cost centre</td></tr>
+<tr><td>EBITDA</td><td>Monthly and YTD</td></tr>
+<tr><td>Budget</td><td>Actual vs budget</td></tr>
+<tr><td>Prior year</td><td>Current vs previous year</td></tr>
+</tbody>
+</table>
+</div>
+<p>This creates a reusable management reporting pack, rather than requiring Finance to manipulate exported Excel data every month.</p>
+
+<h3>2. Budget vs actual</h3>
+<p>Budget reporting is one of the most common reasons organisations need custom ERP reports. A custom Jet Report can combine actual ledger values with budget information and calculate:</p>
+<ul>
+<li>Actual, budget, variance and variance %</li>
+<li>Month and year-to-date</li>
+<li>Full-year budget and remaining budget</li>
+</ul>
+<p>The report can then be structured around the dimensions management actually uses.</p>
+
+<h3>3. Dimension reporting</h3>
+<p>Business Central dimensions are a powerful way of analysing financial information. An organisation might use dimensions for department, cost centre, project, location, programme or funding source. A custom report can use them to produce management information that the standard chart of accounts alone doesn&rsquo;t easily show.</p>
+
+<h3>4. Sales reporting</h3>
+<p>A sales report might combine customer, item, salesperson, quantity, revenue, cost, margin, location and date. The important point is that the report should be designed around the question the business is trying to answer. &ldquo;Which customers generated the highest gross margin this quarter?&rdquo; is a much more useful requirement than &ldquo;give me a sales report.&rdquo;</p>
+
+<h2>The most important part: understand the Business Central data</h2>
+<p>Creating a good Jet Report isn&rsquo;t simply an Excel exercise. The designer needs to understand how the underlying Business Central data is structured. For financial reporting that can include:</p>
+<ul>
+<li>General Ledger Entries, G/L Accounts and G/L Budgets</li>
+<li>Customers, Vendors, Customer Ledger Entries and Vendor Ledger Entries</li>
+<li>Dimensions and Dimension Values</li>
+<li>Items and Value Entries</li>
+<li>Sales and purchase documents</li>
+</ul>
+<p>The relationships between these areas matter. A report can look correct while producing incorrect numbers if the underlying joins, filters or accounting logic are wrong. That is why Business Central knowledge is important when developing complex Jet Reports.</p>
+
+<h2>A typical custom Jet Report process</h2>
+<p>A good reporting project starts with the business requirement rather than the Excel layout.</p>
+<figure class="post-figure">
+<img src="images/jet-report-build-process.svg" width="960" height="250" alt="The six steps of building a custom Jet Report: define the reporting requirement, identify the Business Central data, define the business rules (often the most important step), build the report, validate against Business Central and make it reusable." loading="lazy" />
+<figcaption>The six steps of a custom Jet Report, from requirement to reusable report.</figcaption>
+</figure>
+
+<h3>Step 1: Define the reporting requirement</h3>
+<p>Establish exactly what the report needs to show. For example: &ldquo;We need monthly actual versus budget by department and account, with YTD totals and a comparison with last year.&rdquo;</p>
+
+<h3>Step 2: Identify the Business Central data</h3>
+<p>Work out where the required information exists in Business Central. This may involve several tables and dimensions rather than one source.</p>
+
+<h3>Step 3: Define the business rules</h3>
+<p>This is often the most important stage. Decide:</p>
+<ul>
+<li>Which accounts are included?</li>
+<li>Which dimensions determine the department?</li>
+<li>How are budgets matched to actuals?</li>
+<li>How are credit notes treated?</li>
+<li>Which posting dates are used?</li>
+<li>Are multiple companies included?</li>
+<li>How should missing dimension values be handled?</li>
+</ul>
+
+<h3>Step 4: Build the Jet Report</h3>
+<p>Design the report in Excel using the appropriate Business Central data and reporting logic.</p>
+
+<h3>Step 5: Validate against Business Central</h3>
+<p>For financial reports this is essential. A total in the Jet Report should be explainable back to the underlying Business Central transactions.</p>
+
+<h3>Step 6: Make the report reusable</h3>
+<p>The final report should not need rebuilding every month. The objective is a report Finance can refresh and use repeatedly.</p>
+
+<h2>Jet Reports or Power BI?</h2>
+<p>They solve related but different problems. Jet Reports is particularly effective when Finance wants Excel-based operational or financial reporting that users can refresh and manipulate in a familiar environment. Power BI is generally more appropriate for interactive dashboards, visual analytics, enterprise-wide data models and broader business intelligence.</p>
+<p>In many Business Central environments the answer is not one or the other. A company can use Business Central for transactional processing, Jet Reports for operational and financial Excel reporting, Power BI for dashboards and analytics, and Azure SQL or a data platform for broader reporting requirements. Business Central itself integrates with Power BI, Power Apps and Power Automate as part of the wider Microsoft ecosystem (<a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/integration-overview" target="_blank" rel="noopener">Microsoft Learn</a>).</p>
+<figure class="post-figure">
+<img src="images/jet-reports-power-bi-landscape.svg" width="960" height="360" alt="Business Central handles transactions. Jet Reports provides Excel-based operational and financial reporting, Power BI provides interactive dashboards and analytics, and an Azure SQL or data platform covers enterprise-wide reporting needs." loading="lazy" />
+<figcaption>Each reporting tool in its place around Business Central.</figcaption>
+</figure>
+
+<h2>When a standard Business Central report isn&rsquo;t enough</h2>
+<p>A custom report is particularly useful when a requirement doesn&rsquo;t fit neatly into the standard reports. Typical examples:</p>
+<ul>
+<li>Custom management accounts and bespoke Finance reporting packs</li>
+<li>Complex dimension and multi-company reporting</li>
+<li>Budget analysis and departmental reporting</li>
+<li>Project reporting</li>
+<li>Customer profitability and detailed sales analysis</li>
+<li>Reports combining standard and customised Business Central data</li>
+</ul>
+
+                        <hr class="my-5" />
+                        <h2 class="h4">Need a custom Jet Report?</h2>
+                        <p>A good Jet Report should do more than produce an attractive Excel spreadsheet. It should produce reliable business information from Business Central that Finance can trust and reuse. I work across Business Central reporting, integrations, data migration and enterprise data solutions, with more than 30 years&rsquo; experience across ERP, software engineering, data and enterprise systems, including financial systems, APIs, Power Platform, SQL, ETL, Power BI and reporting.</p>
+                        <p>If you need a custom Jet Report built around your Business Central data, the starting point is the business question the report needs to answer. Get in touch at <a href="mailto:declan@feelyconsultants.com">declan@feelyconsultants.com</a> or find me on <a href="https://www.linkedin.com/in/declanfeely/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+                        <h2 class="h4 mt-5">More articles</h2>
+                        <ul>
+                        <li><a href="business-central-data-migration-guide.html">Business Central Data Migration: The Complete Guide</a></li>
+                        <li><a href="business-central-integration-options.html">Business Central Integration: What Are the Options?</a></li>
+                        <li><a href="business-central-crm-integration.html">Connecting Dynamics 365 CRM and Business Central: An Integration Guide</a></li>
+                        <li><a href="erp-data-migration-approach.html">ERP Data Migration: A Practical Approach That Holds Up at Go-Live</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>
