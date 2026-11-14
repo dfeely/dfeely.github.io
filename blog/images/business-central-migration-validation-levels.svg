@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Four levels of validating a Business Central migration</title><desc id="d">Record counts, financial totals, sample transactions and business validation. In the example, 4,821 customers are extracted and transformed but only 4,819 are loaded, so two are missing and must be investigated.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="300" fill="#ffffff"/>
+<rect x="10.0" y="30" width="215" height="150" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="117.5" y="80.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Record counts</text>
+<text x="117.5" y="106.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">4,821 extracted</text>
+<text x="117.5" y="124.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">4,821 transformed</text>
+<text x="117.5" y="142.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">4,819 loaded: 2 missing</text>
+<circle cx="26.0" cy="46" r="12" fill="#1f4e9c"/>
+<text x="26.0" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="12.5" y="193" width="210" height="24" rx="12" fill="#fdf1e3" stroke="#b45309"/><text x="117.5" y="209.5" font-size="12.5" font-weight="600" fill="#b45309" text-anchor="middle">Investigate before going on</text>
+<line x1="227.0" y1="105" x2="249.67000000000002" y2="105" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="251.67000000000002" y="30" width="215" height="150" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="359.17" y="80.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Financial totals</text>
+<text x="359.17" y="106.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Opening balances, debits</text>
+<text x="359.17" y="124.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">and credits, control</text>
+<text x="359.17" y="142.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">accounts, bank balances</text>
+<circle cx="267.67" cy="46" r="12" fill="#1f4e9c"/>
+<text x="267.67" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<line x1="468.67" y1="105" x2="491.34000000000003" y2="105" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="493.34000000000003" y="30" width="215" height="150" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="600.84" y="80.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Sample transactions</text>
+<text x="600.84" y="106.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Trace representative</text>
+<text x="600.84" y="124.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">records from the legacy</text>
+<text x="600.84" y="142.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">system into Business Central</text>
+<circle cx="509.34000000000003" cy="46" r="12" fill="#1f4e9c"/>
+<text x="509.34000000000003" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<line x1="710.34" y1="105" x2="733.01" y2="105" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="735.01" y="30" width="215" height="150" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="842.51" y="80.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Business validation</text>
+<text x="842.51" y="106.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Finance users confirm it</text>
+<text x="842.51" y="124.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">makes sense in real</text>
+<text x="842.51" y="142.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">scenarios</text>
+<circle cx="751.01" cy="46" r="12" fill="#1f4e9c"/>
+<text x="751.01" y="51" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<rect x="10" y="240" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="267.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">Each level catches a different kind of error: counts are the cheapest check, business sign-off the final one.</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 278" width="960" height="278" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Rehearsing a Business Central migration until it reconciles</title><desc id="d">Extract and transform, load a test environment, then validate and reconcile. If differences are found, fix the mapping and run again. Once reconciled, the business signs off and the production cutover follows.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="278" fill="#ffffff"/>
+<rect x="10.0" y="30" width="160" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="90.0" y="70.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Extract and</text>
+<text x="90.0" y="90.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">transform</text>
+<line x1="172.0" y1="75" x2="203.0" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="205.0" y="30" width="160" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="285.0" y="70.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Load test</text>
+<text x="285.0" y="90.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">environment</text>
+<line x1="367.0" y1="75" x2="398.0" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="400.0" y="30" width="160" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="480.0" y="70.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Validate and</text>
+<text x="480.0" y="90.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">reconcile</text>
+<line x1="562.0" y1="75" x2="593.0" y2="75" stroke="#1b7f4b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="595.0" y="30" width="160" height="90" rx="10" fill="#e6f4ec" stroke="#1b7f4b" stroke-width="1.5"/>
+<text x="675.0" y="70.0" font-size="16" font-weight="700" fill="#1b7f4b" text-anchor="middle">Business</text>
+<text x="675.0" y="90.0" font-size="16" font-weight="700" fill="#1b7f4b" text-anchor="middle">sign-off</text>
+<line x1="757.0" y1="75" x2="788.0" y2="75" stroke="#1b7f4b" stroke-width="2" marker-end="url(#a)"/>
+<rect x="790.0" y="30" width="160" height="90" rx="10" fill="#e6f4ec" stroke="#1b7f4b" stroke-width="1.5"/>
+<text x="870.0" y="70.0" font-size="16" font-weight="700" fill="#1b7f4b" text-anchor="middle">Production</text>
+<text x="870.0" y="90.0" font-size="16" font-weight="700" fill="#1b7f4b" text-anchor="middle">cutover</text>
+<path d="M480.0,123 L480.0,175 L90.0,175 L90.0,123" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<rect x="95.0" y="163" width="380" height="24" rx="12" fill="#fdf1e3" stroke="#b45309"/><text x="285.0" y="179.5" font-size="12.5" font-weight="600" fill="#b45309" text-anchor="middle">Differences found: fix the mapping and run it again</text>
+<rect x="535.5" y="2" width="84" height="24" rx="12" fill="#e6f4ec" stroke="#1b7f4b"/><text x="577.5" y="18.5" font-size="12.5" font-weight="600" fill="#1b7f4b" text-anchor="middle">Reconciled</text>
+<rect x="10" y="214" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="241.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">Rehearse as many times as it takes: the final cutover should be a repeat, not a first attempt.</text>
+</svg>

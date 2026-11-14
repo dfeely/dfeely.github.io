@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" width="960" height="220" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">The nine steps of a Business Central data migration</title><desc id="d">Understand, extract, profile, map, clean, transform, load, validate and reconcile, in that order.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="220" fill="#ffffff"/>
+<rect x="10.0" y="30" width="91" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="55.5" y="80.0" font-size="14" font-weight="700" fill="#1f4e9c" text-anchor="middle">Understand</text>
+<circle cx="55.5" cy="30" r="13" fill="#1f4e9c"/><text x="55.5" y="35" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<line x1="102.0" y1="75" x2="115.1" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="116.1" y="30" width="91" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="161.6" y="80.0" font-size="14" font-weight="700" fill="#1f4e9c" text-anchor="middle">Extract</text>
+<circle cx="161.6" cy="30" r="13" fill="#1f4e9c"/><text x="161.6" y="35" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<line x1="208.1" y1="75" x2="221.2" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="222.2" y="30" width="91" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="267.7" y="80.0" font-size="14" font-weight="700" fill="#1f4e9c" text-anchor="middle">Profile</text>
+<circle cx="267.7" cy="30" r="13" fill="#1f4e9c"/><text x="267.7" y="35" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<line x1="314.2" y1="75" x2="327.3" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="328.29999999999995" y="30" width="91" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="373.79999999999995" y="80.0" font-size="14" font-weight="700" fill="#1f4e9c" text-anchor="middle">Map</text>
+<circle cx="373.79999999999995" cy="30" r="13" fill="#1f4e9c"/><text x="373.79999999999995" y="35" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<line x1="420.29999999999995" y1="75" x2="433.4" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="434.4" y="30" width="91" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="479.9" y="80.0" font-size="14" font-weight="700" fill="#1f4e9c" text-anchor="middle">Clean</text>
+<circle cx="479.9" cy="30" r="13" fill="#1f4e9c"/><text x="479.9" y="35" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<line x1="526.4" y1="75" x2="539.5" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="540.5" y="30" width="91" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="586.0" y="80.0" font-size="14" font-weight="700" fill="#1f4e9c" text-anchor="middle">Transform</text>
+<circle cx="586.0" cy="30" r="13" fill="#1f4e9c"/><text x="586.0" y="35" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<line x1="632.5" y1="75" x2="645.6" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="646.5999999999999" y="30" width="91" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="692.0999999999999" y="80.0" font-size="14" font-weight="700" fill="#1f4e9c" text-anchor="middle">Load</text>
+<circle cx="692.0999999999999" cy="30" r="13" fill="#1f4e9c"/><text x="692.0999999999999" y="35" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+<line x1="738.5999999999999" y1="75" x2="751.6999999999999" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="752.6999999999999" y="30" width="91" height="90" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="798.1999999999999" y="80.0" font-size="14" font-weight="700" fill="#1f4e9c" text-anchor="middle">Validate</text>
+<circle cx="798.1999999999999" cy="30" r="13" fill="#1f4e9c"/><text x="798.1999999999999" y="35" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">8</text>
+<line x1="844.6999999999999" y1="75" x2="857.8" y2="75" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="858.8" y="30" width="91" height="90" rx="10" fill="#e6f4ec" stroke="#1b7f4b" stroke-width="1.5"/>
+<text x="904.3" y="80.0" font-size="14" font-weight="700" fill="#1b7f4b" text-anchor="middle">Reconcile</text>
+<circle cx="904.3" cy="30" r="13" fill="#1b7f4b"/><text x="904.3" y="35" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">9</text>
+<path d="M55.5,138 L55.5,152 L904.3,152 L904.3,138" fill="none" stroke="#1f4e9c" stroke-width="1.5"/>
+<rect x="10" y="164" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="191.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">Not just export, transform, import: the work is in the steps either side of the load.</text>
+</svg>

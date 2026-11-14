@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" width="960" height="330" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Who owns what between Dynamics 365 CRM and Business Central</title><desc id="d">CRM owns leads and opportunities, contacts and the relationship, and sales activities. Business Central owns the financial customer account, pricing rules, orders in fulfilment, and invoices and payments. New or changed customers flow from CRM to Business Central, and order status, invoices and balances flow back.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="330" fill="#ffffff"/>
+<rect x="10" y="20" width="330" height="230" rx="12" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="175" y="52" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="middle">Dynamics 365 CRM owns</text>
+<rect x="30" y="72" width="290" height="42" rx="8" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="175" y="98" font-size="14.5" font-weight="600" fill="#212529" text-anchor="middle">Leads and opportunities</text>
+<rect x="30" y="126" width="290" height="42" rx="8" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="175" y="152" font-size="14.5" font-weight="600" fill="#212529" text-anchor="middle">Contacts and the relationship</text>
+<rect x="30" y="180" width="290" height="42" rx="8" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="175" y="206" font-size="14.5" font-weight="600" fill="#212529" text-anchor="middle">Sales activities</text>
+<rect x="620" y="20" width="330" height="230" rx="12" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="785" y="52" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="middle">Business Central owns</text>
+<rect x="640" y="66" width="290" height="36" rx="8" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="785" y="89" font-size="14.5" font-weight="600" fill="#212529" text-anchor="middle">Financial customer account</text>
+<rect x="640" y="110" width="290" height="36" rx="8" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="785" y="133" font-size="14.5" font-weight="600" fill="#212529" text-anchor="middle">Pricing rules</text>
+<rect x="640" y="154" width="290" height="36" rx="8" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="785" y="177" font-size="14.5" font-weight="600" fill="#212529" text-anchor="middle">Orders in fulfilment</text>
+<rect x="640" y="198" width="290" height="36" rx="8" fill="#ffffff" stroke="#b7c6e0"/>
+<text x="785" y="221" font-size="14.5" font-weight="600" fill="#212529" text-anchor="middle">Invoices and payments</text>
+<line x1="345" y1="105" x2="615" y2="105" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="385.0" y="70" width="190" height="24" rx="12" fill="#ffffff" stroke="#b7c6e0"/><text x="480" y="86.5" font-size="12.5" font-weight="600" fill="#5c6670" text-anchor="middle">New or changed customer</text>
+<line x1="615" y1="185" x2="345" y2="185" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="368.0" y="150" width="224" height="24" rx="12" fill="#ffffff" stroke="#b7c6e0"/><text x="480" y="166.5" font-size="12.5" font-weight="600" fill="#5c6670" text-anchor="middle">Order status, invoices, balances</text>
+<rect x="10" y="270" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="297.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">One owner for each field: two systems editing the same data is where conflicts start.</text>
+</svg>

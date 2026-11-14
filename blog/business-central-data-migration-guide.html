@@ -76,6 +76,11 @@
 <p><strong>Understand &rarr; Extract &rarr; Profile &rarr; Map &rarr; Clean &rarr; Transform &rarr; Load &rarr; Validate &rarr; Reconcile.</strong></p>
 <p>The difference matters because an old system may hold years of accumulated data: obsolete customers, inconsistent addresses, duplicated records, invalid codes and historical structures with no direct equivalent in Business Central. For more on the general approach, see <a href="erp-data-migration-approach.html">ERP Data Migration: A Practical Approach That Holds Up at Go-Live</a>.</p>
 
+<figure class="post-figure">
+<img src="images/business-central-migration-nine-steps.svg" width="960" height="220" alt="The nine steps of a migration in order: understand, extract, profile, map, clean, transform, load, validate and reconcile." loading="lazy" />
+<figcaption>The nine steps of a Business Central data migration.</figcaption>
+</figure>
+
 <h2>Step 1: Understand the source system</h2>
 <p>Before mapping anything, understand the existing system:</p>
 <ul>
@@ -135,6 +140,11 @@
 <li><strong>Business validation:</strong> finance users confirm that the migrated data makes sense in real business scenarios.</li>
 </ul>
 
+<figure class="post-figure">
+<img src="images/business-central-migration-validation-levels.svg" width="960" height="300" alt="Four levels of validation: record counts, financial totals, sample transactions and business validation. In the example 4,821 customers are extracted and transformed but only 4,819 are loaded, so two are missing." loading="lazy" />
+<figcaption>Four levels of validation. The record-count example shows two customers lost between transformation and load.</figcaption>
+</figure>
+
 <h2>Step 8: Reconcile</h2>
 <p>Reconciliation is one of the most important parts of a financial migration. The objective is not &ldquo;the data imported successfully.&rdquo; It is &ldquo;the migrated Business Central data reconciles with the source system.&rdquo;</p>
 <div class="table-responsive">
@@ -163,6 +173,11 @@
 <p>A move to the cloud is not simply a database copy. It can involve application modernisation, extension replacement, integration redesign and data migration, and data volume, storage, the number of companies, extensions and migration performance all need planning when moving on-premises data to Business Central Online. For a worked example, see <a href="integra-finance-to-business-central-data-migration.html">Integra Finance to Business Central: A Practical Data Migration Approach</a>.</p>
 
 <h2>Business Central data migration checklist</h2>
+<p>The checklist below follows a rehearsal cycle: migrate, validate, reconcile and repeat until the numbers agree, then cut over.</p>
+<figure class="post-figure">
+<img src="images/business-central-migration-rehearsal-cycle.svg" width="960" height="278" alt="Extract and transform, load a test environment, then validate and reconcile. If differences are found, fix the mapping and run again. Once reconciled, the business signs off and the production cutover follows." loading="lazy" />
+<figcaption>Rehearse until the migration reconciles, then sign off and cut over.</figcaption>
+</figure>
 <h3>Discovery</h3>
 <ul>
 <li>Identify source systems and data owners</li>

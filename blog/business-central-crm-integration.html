@@ -61,6 +61,11 @@
 <h2>1. Decide the system of record for each entity</h2>
 <p>For every shared entity, such as customers, contacts, products, price lists, quotes, orders and invoices, name one system that owns it. A common pattern is that CRM owns the customer relationship and sales opportunity, while Business Central owns the financial customer account, pricing rules, orders in fulfilment and invoices. Where both systems edit the same field, you will spend your time resolving conflicts, so avoid it by design.</p>
 
+<figure class="post-figure">
+<img src="images/crm-business-central-system-of-record.svg" width="960" height="330" alt="Dynamics 365 CRM owns leads and opportunities, contacts and the relationship, and sales activities. Business Central owns the financial customer account, pricing rules, orders in fulfilment, and invoices and payments. Customers flow from CRM to Business Central and order status, invoices and balances flow back." loading="lazy" />
+<figcaption>A common split of ownership between CRM and Business Central, with data flowing each way.</figcaption>
+</figure>
+
 <h2>2. Choose the right integration pattern</h2>
 <p>Several options sit between a simple standard connection and a fully custom service:</p>
 <ul>
@@ -85,6 +90,11 @@
 
 <h2>5. Treat the integration as software</h2>
 <p>Customisations in Business Central are built as extensions in AL, and integration code deserves the same discipline as any other product. Keep it in source control, build and deploy through CI/CD pipelines, test in sandbox environments with realistic data and release with a clear rollback plan. This is also what keeps the integration maintainable through the regular Business Central release waves.</p>
+
+<figure class="post-figure">
+<img src="images/crm-integration-delivery-pipeline.svg" width="960" height="230" alt="An integration delivered like software: source control, build, sandbox test, release with a rollback plan, then monitoring with logs, alerts and a named owner." loading="lazy" />
+<figcaption>The delivery pipeline an integration deserves, from source control to monitoring.</figcaption>
+</figure>
 
 <h2>6. Plan the data that goes in first</h2>
 <p>Before the integration runs for the first time, the two systems need to agree on the starting data: which customers match, which are duplicates and which codes map to which. Run a matching and cleansing exercise first. It overlaps with <a href="erp-data-migration-approach.html">ERP data migration</a>, and the same validation and reconciliation techniques apply.</p>

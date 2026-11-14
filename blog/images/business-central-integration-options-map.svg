@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Business Central integration options at a glance</title><desc id="d">Business Central sits in the middle. CRM, ecommerce and websites, and portals and apps connect through REST or custom APIs. Microsoft 365 workflows use Power Automate, reporting and BI use OData or API queries, and a data warehouse uses ETL or Azure services.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="420" fill="#ffffff"/>
+<rect x="370" y="105" width="220" height="170" rx="10" fill="#1f4e9c" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="480.0" y="164.0" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Business</text>
+<text x="480.0" y="184.0" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Central</text>
+<text x="480.0" y="210.0" font-size="13.5" font-weight="400" fill="#ffffff" text-anchor="middle">Built-in and</text>
+<text x="480.0" y="228.0" font-size="13.5" font-weight="400" fill="#ffffff" text-anchor="middle">custom AL APIs</text>
+<rect x="10" y="30" width="230" height="80" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="125.0" y="63.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">CRM</text>
+<text x="125.0" y="89.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Leads, customers, orders</text>
+<line x1="243" y1="70" x2="367" y2="136.0" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="266.4" y="91.0" width="81.2" height="24" rx="12" fill="#ffffff" stroke="#b7c6e0"/><text x="307" y="107.5" font-size="12.5" font-weight="600" fill="#5c6670" text-anchor="middle">REST API</text>
+<rect x="10" y="150" width="230" height="80" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="125.0" y="183.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Ecommerce and websites</text>
+<text x="125.0" y="209.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Online orders, stock</text>
+<line x1="243" y1="190" x2="367" y2="190.0" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="266.4" y="178.0" width="81.2" height="24" rx="12" fill="#ffffff" stroke="#b7c6e0"/><text x="307" y="194.5" font-size="12.5" font-weight="600" fill="#5c6670" text-anchor="middle">REST API</text>
+<rect x="10" y="270" width="230" height="80" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="125.0" y="303.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Portals and apps</text>
+<text x="125.0" y="329.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Payments, mobile, partners</text>
+<line x1="243" y1="310" x2="367" y2="244.0" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="229.39999999999998" y="265.0" width="155.20000000000002" height="24" rx="12" fill="#ffffff" stroke="#b7c6e0"/><text x="307" y="281.5" font-size="12.5" font-weight="600" fill="#5c6670" text-anchor="middle">REST or custom API</text>
+<rect x="720" y="30" width="230" height="80" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="835.0" y="63.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Microsoft 365</text>
+<text x="835.0" y="89.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Approvals, alerts, documents</text>
+<line x1="593" y1="136.0" x2="717" y2="70" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="590.2" y="91.0" width="125.60000000000001" height="24" rx="12" fill="#ffffff" stroke="#b7c6e0"/><text x="653" y="107.5" font-size="12.5" font-weight="600" fill="#5c6670" text-anchor="middle">Power Automate</text>
+<rect x="720" y="150" width="230" height="80" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="835.0" y="183.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Reporting and BI</text>
+<text x="835.0" y="209.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Existing and read-only feeds</text>
+<line x1="593" y1="190.0" x2="717" y2="190" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="575.4" y="178.0" width="155.20000000000002" height="24" rx="12" fill="#ffffff" stroke="#b7c6e0"/><text x="653" y="194.5" font-size="12.5" font-weight="600" fill="#5c6670" text-anchor="middle">OData or API query</text>
+<rect x="720" y="270" width="230" height="80" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="835.0" y="303.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Data warehouse</text>
+<text x="835.0" y="329.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">High-volume analytics</text>
+<line x1="593" y1="244.0" x2="717" y2="310" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<rect x="568.0" y="265.0" width="170.0" height="24" rx="12" fill="#ffffff" stroke="#b7c6e0"/><text x="653" y="281.5" font-size="12.5" font-weight="600" fill="#5c6670" text-anchor="middle">ETL / Azure services</text>
+<rect x="10" y="366" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="393.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">No single technology fits every scenario: choose the approach per integration.</text>
+</svg>

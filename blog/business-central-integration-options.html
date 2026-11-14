@@ -68,6 +68,11 @@
 </ul>
 
 <h2>The main integration options</h2>
+<p>Each approach has a natural home, as the map below shows. The sections that follow explain when each one fits.</p>
+<figure class="post-figure">
+<img src="images/business-central-integration-options-map.svg" width="960" height="420" alt="Diagram with Business Central in the centre. CRM, ecommerce and websites, and portals and apps connect through REST or custom APIs. Microsoft 365 uses Power Automate, reporting and BI use OData or API queries, and a data warehouse uses ETL or Azure services." loading="lazy" />
+<figcaption>Which integration approach typically connects Business Central to which kind of system.</figcaption>
+</figure>
 
 <h3>REST APIs</h3>
 <p>REST APIs are the preferred approach for modern Business Central integrations. Business Central ships with built-in APIs and also supports custom APIs built with AL API pages and API queries. They suit any application that needs to exchange structured data with Business Central: CRM, ecommerce, customer portals, payment systems, data services and custom business applications.</p>
@@ -121,6 +126,10 @@
 <li><strong>Security:</strong> how will authentication and authorisation be managed?</li>
 <li><strong>Reconciliation:</strong> how do you prove both systems hold the expected data?</li>
 </ul>
+<figure class="post-figure">
+<img src="images/business-central-integration-reliability-flow.svg" width="960" height="360" alt="Diagram of a reliable integration: a source system sends data to an integration layer and on to Business Central, and the business result is checked. Rejected transactions go to an error queue, then an alert to a named person, then a safe resubmit." loading="lazy" />
+<figcaption>A reliable integration plans for failure: rejected transactions are visible, alerted and safe to resubmit.</figcaption>
+</figure>
 
 <h2>When a custom integration is required</h2>
 <p>Standard connectors are useful, but they do not solve every problem. A custom integration is usually needed when:</p>
