@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBN117Z5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CWBN117Z5K');
+</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>NAV to Business Central Data Migration: A Practical Guide | Declan Feely</title>
+        <meta name="description" content="A practical guide to NAV to Business Central data migration: what to migrate or archive, customisations, dimensions, opening balances, historical data, integrations, reports, testing and reconciliation." />
+        <meta name="author" content="Declan Feely" />
+        <link rel="canonical" href="https://www.feelyconsultants.com/blog/nav-to-business-central-data-migration-guide.html" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="NAV to Business Central Data Migration: A Practical Guide | Declan Feely" />
+        <meta property="og:description" content="A practical guide to NAV to Business Central data migration: what to migrate or archive, customisations, dimensions, opening balances, historical data, integrations, reports, testing and reconciliation." />
+        <meta property="og:url" content="https://www.feelyconsultants.com/blog/nav-to-business-central-data-migration-guide.html" />
+        <meta property="og:image" content="https://www.feelyconsultants.com/assets/img/profile.jpg" />
+        <meta name="twitter:card" content="summary" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "NAV to Business Central Data Migration: A Practical Guide", "description": "A practical guide to NAV to Business Central data migration: what to migrate or archive, customisations, dimensions, opening balances, historical data, integrations, reports, testing and reconciliation.", "datePublished": "2026-11-14", "dateModified": "2026-11-14", "author": {"@type": "Person", "name": "Declan Feely", "url": "https://www.feelyconsultants.com/"}, "publisher": {"@type": "Organization", "name": "Feely Software Consultants", "url": "https://www.feelyconsultants.com/"}, "mainEntityOfPage": "https://www.feelyconsultants.com/blog/nav-to-business-central-data-migration-guide.html"}</script>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand" href="../index.html">
+                <span class="d-block d-lg-none">Declan Feely</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="Declan Feely" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#erp">ERP &amp; Enterprise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#engineering">Software Engineering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#data-ai">Data &amp; AI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../blog/index.html">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-0">
+            <section class="resume-section blog-section" id="post">
+                <div class="resume-section-content">
+                    <article class="post-body">
+                        <p class="post-meta mb-3"><a href="index.html">&larr; All articles</a></p>
+                        <h1 class="mb-2">NAV to Business Central Data Migration: A Practical Guide</h1>
+                        <div class="post-meta mb-4">By Declan Feely · <time datetime="2026-11-14">14 November 2026</time></div>
+
+<p class="lead">Moving from Microsoft Dynamics NAV to Dynamics 365 Business Central is more than an upgrade to a newer version of the same ERP. For many organisations it combines data migration, application modernisation, integration changes, reporting changes and a review of business processes. The data migration is one of the most important parts of the project, and this guide covers the key considerations when planning it.</p>
+
+<h2>What is a NAV to Business Central migration?</h2>
+<p>Dynamics NAV is the predecessor to Dynamics 365 Business Central. Many organisations have used NAV for years and have accumulated custom tables, fields, reports and code, third-party add-ons, integrations, historical transactions and bespoke business processes. Moving to Business Central therefore needs more than copying data from one database to another. The project has to answer seven questions:</p>
+<ol>
+<li>What data should be migrated?</li>
+<li>What data can be archived?</li>
+<li>How does the existing data map to Business Central?</li>
+<li>Which customisations need to be replaced?</li>
+<li>Which integrations need to be redesigned?</li>
+<li>How will the migrated data be validated?</li>
+<li>How will Finance reconcile the new system with NAV?</li>
+</ol>
+<p>Microsoft documents specific routes for moving NAV and on-premises Business Central to Business Central online, including cloud migration tooling for suitable scenarios. Its guidance distinguishes a full migration, which brings customisations across as AL extensions, from a reimplementation that moves only essential data, and it recommends at least one dry run in a sandbox before production (<a href="https://learn.microsoft.com/en-gb/dynamics365/business-central/dev-itpro/administration/migrate-nav" target="_blank" rel="noopener">Microsoft Learn</a>).</p>
+
+<h2>Should all NAV data be migrated?</h2>
+<p>Not necessarily, and this is one of the first decisions to make. A common mistake is assuming that because data exists in NAV it must all be transferred. A better approach is to classify it.</p>
+<figure class="post-figure">
+<img src="images/nav-migrate-or-archive.svg" width="960" height="394" alt="Customers, vendors, items, chart of accounts, dimensions, fixed assets, bank accounts, opening balances, current transactions and active documents may need to be migrated. Old transactions, obsolete customers and vendors, historical documents, old operational records and reference data may be archived. The decision depends on reporting, audit, statutory and operational needs." loading="lazy" />
+<figcaption>Classify NAV data into what to migrate and what to archive.</figcaption>
+</figure>
+<p><strong>Data that may need to be migrated:</strong> customers, vendors, items, chart of accounts, dimensions, fixed assets, bank accounts, opening balances, current transactions, and active sales and purchase documents.</p>
+<p><strong>Data that may be archived:</strong> old transactions, obsolete customers and vendors, historical documents, old operational records, and data retained primarily for reference.</p>
+<p>The right decision depends on reporting, audit, statutory and operational requirements. Some organisations need several years of transactional history to stay accessible. For others, migrating opening balances and current operational data while keeping older history in a separate reporting platform is more appropriate.</p>
+
+<h2>NAV customisations need to be assessed</h2>
+<p>Older NAV implementations often contain significant customisation. Before starting, create an inventory of the existing solution:</p>
+<ul>
+<li>Custom tables, custom fields and modified standard objects</li>
+<li>Custom reports, pages and code</li>
+<li>Interfaces and scheduled jobs</li>
+<li>Third-party modules and external applications</li>
+</ul>
+<p>The key question is not &ldquo;how do we migrate this customisation?&rdquo; It is &ldquo;does the business still need this functionality?&rdquo; Some customisations are no longer required. Others can be replaced by standard Business Central functionality. Some need to be redeveloped as Business Central extensions.</p>
+
+<h2>NAV data mapping</h2>
+<p>The legacy data structure has to be mapped to the target Business Central environment. A mapping document might look like this:</p>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr><th scope="col">NAV source</th><th scope="col">Business Central target</th><th scope="col">Migration rule</th></tr>
+</thead>
+<tbody>
+<tr><td>Customer No.</td><td>Customer No.</td><td>Retain</td></tr>
+<tr><td>Customer Name</td><td>Customer Name</td><td>Clean</td></tr>
+<tr><td>Customer Posting Group</td><td>Customer Posting Group</td><td>Map</td></tr>
+<tr><td>Vendor No.</td><td>Vendor No.</td><td>Retain</td></tr>
+<tr><td>G/L Account</td><td>G/L Account</td><td>Map</td></tr>
+<tr><td>Department</td><td>Dimension</td><td>Convert</td></tr>
+<tr><td>Cost Centre</td><td>Dimension</td><td>Convert</td></tr>
+<tr><td>Fixed Asset</td><td>Fixed Asset</td><td>Map</td></tr>
+<tr><td>Bank Account</td><td>Bank Account</td><td>Validate</td></tr>
+</tbody>
+</table>
+</div>
+<p>The exact mapping depends on the NAV version, the customisations and the Business Central design.</p>
+
+<h2>Dimensions are particularly important</h2>
+<p>Dimensions can have a major impact on a migration. An organisation may have used custom fields in NAV for department, cost centre, project, location, programme or business unit. These may need to become Business Central dimensions:</p>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr><th scope="col">NAV (custom fields)</th><th scope="col">Business Central (dimensions)</th></tr>
+</thead>
+<tbody>
+<tr><td>Department = FIN</td><td>Department = FIN</td></tr>
+<tr><td>CostCentre = 100</td><td>Cost Centre = 100</td></tr>
+<tr><td>Project = P001</td><td>Project = P001</td></tr>
+</tbody>
+</table>
+</div>
+<p>The migration has to preserve the financial meaning of the original information. Simply importing the values is not enough.</p>
+
+<h2>Migrating the chart of accounts</h2>
+<p>Review the chart of accounts before migration. Some organisations keep the existing structure. Others use the move to rationalise it. For example, NAV accounts 4000 Sales, 4010 Domestic Sales and 4020 Export Sales might become a single 4000 Revenue account in Business Central, with the additional analysis provided through dimensions.</p>
+<p>That can simplify financial reporting, but it also changes the migration and reporting requirements. Finance should make the decision and it should be reflected in the migration mapping.</p>
+
+<h2>Customer and vendor migration</h2>
+<p>Profile customer and vendor data before migration, looking for:</p>
+<ul>
+<li>Duplicate records and inactive accounts</li>
+<li>Missing addresses and invalid VAT information</li>
+<li>Incorrect currencies and payment terms</li>
+<li>Invalid posting groups and missing dimensions</li>
+<li>Obsolete contacts</li>
+</ul>
+<p>Migrating poor-quality master data simply moves the problem into Business Central, so cleanse it before the final production migration.</p>
+
+<h2>Fixed asset migration</h2>
+<p>Fixed assets need particular care because the migration may have to preserve asset number, description, acquisition cost, depreciation, accumulated depreciation, net book value, depreciation method and periods, asset class and posting groups. The approach depends on whether you are migrating detailed historical asset transactions or establishing opening balances. Finance should sign off the resulting fixed asset balances.</p>
+
+<h2>Opening balances</h2>
+<p>Opening balances are often one of the most important parts of the migration. A typical financial migration may need G/L, customer, vendor, bank, fixed asset and inventory balances. The resulting Business Central balances should reconcile to the agreed NAV closing position:</p>
+<div class="table-responsive">
+<table class="table table-bordered">
+<tbody>
+<tr><th scope="row">NAV closing balance</th><td>&euro;8,425,620</td></tr>
+<tr><th scope="row">Business Central opening balance</th><td>&euro;8,425,620</td></tr>
+<tr><th scope="row">Difference</th><td>&euro;0</td></tr>
+</tbody>
+</table>
+</div>
+<p>Perform this kind of reconciliation systematically rather than relying on visual inspection.</p>
+
+<h2>Historical transactions</h2>
+<p>Historical transactions need their own strategy, and there are three broad options.</p>
+<figure class="post-figure">
+<img src="images/nav-historical-data-options.svg" width="960" height="345" alt="Option 1 migrates detailed history: full history in one system but a more complex migration. Option 2 migrates opening balances only: simpler, with an easier cutover, but history is split between systems. Option 3 archives historical data in a separate reporting platform." loading="lazy" />
+<figcaption>Three ways to handle historical NAV transactions, with their trade-offs.</figcaption>
+</figure>
+<p><strong>Option 1: migrate detailed history.</strong> Historical transactions are loaded into Business Central. You get full transaction history, easier Business Central analysis and historical reporting in one system. The cost is a more complex migration, more data, greater validation requirements and potentially longer migration windows.</p>
+<p><strong>Option 2: migrate opening balances.</strong> Only the required opening financial position is migrated, and history stays in the legacy environment or a reporting platform. The migration is simpler, with lower data volume and an easier cutover, but historical reporting is split between systems.</p>
+<p><strong>Option 3: archive historical data.</strong> NAV history is kept in a separate reporting or archive environment. This gives access to history without making the Business Central migration unnecessarily complicated.</p>
+
+<h2>NAV integrations need to be reviewed</h2>
+<p>The ERP is rarely operating on its own. NAV may be integrated with CRM, payroll, banking, ecommerce, warehouse systems, websites, payment systems, data warehouses, reporting applications and external APIs. Document every interface before migration and decide for each one:</p>
+<ul>
+<li><strong>Keep:</strong> can the existing integration continue?</li>
+<li><strong>Replace:</strong> should it be redesigned using Business Central APIs or another integration mechanism?</li>
+<li><strong>Remove:</strong> is the integration still required?</li>
+</ul>
+<p>Business Central provides standard APIs and supports custom APIs for integration with external applications. For the options in detail, see <a href="business-central-integration-options.html">Business Central Integration: What Are the Options?</a></p>
+
+<h2>NAV reports need to be reviewed</h2>
+<p>A NAV implementation may contain dozens or hundreds of reports. Do not automatically recreate all of them. Categorise them instead:</p>
+<ul>
+<li><strong>Still required:</strong> rebuild or replace them.</li>
+<li><strong>Replace with standard Business Central:</strong> no custom development required.</li>
+<li><strong>Replace with Jet Reports:</strong> useful for Excel-based financial and operational reporting. See <a href="custom-jet-report-business-central.html">How to Create a Custom Jet Report in Business Central</a>.</li>
+<li><strong>Replace with Power BI:</strong> appropriate for dashboards, analytics and broader management information.</li>
+<li><strong>No longer required:</strong> retire them.</li>
+</ul>
+<p>This can significantly reduce unnecessary development during the migration.</p>
+<figure class="post-figure">
+<img src="images/nav-customisation-triage.svg" width="960" height="394" alt="Triage for NAV customisations, integrations and reports. Customisations: replace with standard, redevelop as an extension, or retire. Integrations: keep, replace with Business Central APIs, or remove. Reports: use a standard report, rebuild in Jet Reports or Power BI, or retire." loading="lazy" />
+<figcaption>Decide what to keep, replace or retire before building anything.</figcaption>
+</figure>
+
+<h2>Testing the migration</h2>
+<p>A NAV to Business Central migration should be performed several times before production. A typical approach is:</p>
+<ol>
+<li><strong>Migration 1:</strong> initial data migration.</li>
+<li><strong>Migration 2:</strong> correct mapping and transformation issues.</li>
+<li><strong>Migration 3:</strong> business-user testing.</li>
+<li><strong>Migration 4:</strong> production rehearsal.</li>
+<li><strong>Final migration:</strong> production cutover.</li>
+</ol>
+<p>Each iteration should improve the quality and repeatability of the migration.</p>
+<figure class="post-figure">
+<img src="images/nav-migration-test-runs.svg" width="960" height="252" alt="Migration 1 is the initial data migration, migration 2 corrects mapping and transformation, migration 3 is business-user testing, migration 4 is a production rehearsal, and the final migration is the production cutover." loading="lazy" />
+<figcaption>Repeated test migrations lead to a final cutover that is a repeat, not a first attempt.</figcaption>
+</figure>
+
+<h2>Data migration reconciliation</h2>
+<p>Build financial reconciliation into the migration process. Useful checks include:</p>
+<ul>
+<li><strong>General ledger:</strong> total debits, total credits, trial balance and account balances.</li>
+<li><strong>Customers:</strong> customer count, outstanding balance and aged receivables.</li>
+<li><strong>Vendors:</strong> vendor count, outstanding balance and aged payables.</li>
+<li><strong>Bank:</strong> bank account balances and reconciliation position.</li>
+<li><strong>Fixed assets:</strong> acquisition cost, accumulated depreciation and net book value.</li>
+<li><strong>Inventory:</strong> quantity, value and location.</li>
+</ul>
+<p>The objective is evidence that the Business Central data agrees with the agreed NAV source position. For a wider view of validation, see <a href="business-central-data-migration-guide.html">Business Central Data Migration: The Complete Guide</a>.</p>
+
+<h2>NAV to Business Central migration checklist</h2>
+<h3>Discovery</h3>
+<ul>
+<li>Identify the NAV version</li>
+<li>Inventory customisations, integrations and reports</li>
+<li>Identify data owners</li>
+<li>Define migration scope</li>
+</ul>
+<h3>Data</h3>
+<ul>
+<li>Profile source data, identify duplicates and clean master data</li>
+<li>Map customers, vendors, items, G/L accounts, dimensions and fixed assets</li>
+<li>Define the historical data strategy</li>
+</ul>
+<h3>Migration</h3>
+<ul>
+<li>Extract NAV data, transform it and load Business Central</li>
+<li>Validate record counts and reconcile financial balances</li>
+<li>Test integrations and reporting</li>
+</ul>
+<h3>Cutover</h3>
+<ul>
+<li>Final data extraction, transformation and migration</li>
+<li>Financial reconciliation and business sign-off</li>
+<li>Go-live and post-go-live validation</li>
+</ul>
+
+<h2>How much does a NAV to Business Central migration cost?</h2>
+<p>There isn&rsquo;t a single price. The cost depends heavily on the NAV version, number of companies, data volume, customisations, historical data requirements, number of integrations, reporting requirements, data quality, required testing and cutover complexity.</p>
+<p>A relatively clean NAV environment with limited customisation can be considerably simpler than a heavily customised system with multiple integrations and decades of history. The first step should therefore be a migration assessment, rather than trying to estimate the whole project from the number of records alone.</p>
+
+                        <hr class="my-5" />
+                        <h2 class="h4">Planning a NAV to Business Central migration?</h2>
+                        <p>A successful NAV to Business Central migration needs a combination of ERP knowledge, data understanding and technical implementation capability. My experience spans Business Central, Dynamics ERP, financial systems, data migration, ETL, integrations, SQL, reporting and Power Platform. That includes migrating financial information into Business Central, mapping legacy data, working with dimensions, customers, vendors, fixed assets and opening balances, and validating the resulting financial data.</p>
+                        <p>The objective is straightforward: move the right data, preserve its business meaning and prove that the resulting Business Central system reconciles with the source. Get in touch at <a href="mailto:declan@feelyconsultants.com">declan@feelyconsultants.com</a> or find me on <a href="https://www.linkedin.com/in/declanfeely/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+                        <h2 class="h4 mt-5">More articles</h2>
+                        <ul>
+                        <li><a href="business-central-data-migration-guide.html">Business Central Data Migration: The Complete Guide</a></li>
+                        <li><a href="integra-finance-to-business-central-data-migration.html">Integra Finance to Business Central: A Practical Data Migration Approach</a></li>
+                        <li><a href="dynamics-ax-2012-to-dynamics-365-finance-operations.html">Dynamics AX 2012 to Dynamics 365 Finance and Operations: How to Plan the Move</a></li>
+                        <li><a href="custom-jet-report-business-central.html">How to Create a Custom Jet Report in Business Central</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>
