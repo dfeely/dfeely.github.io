@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBN117Z5K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CWBN117Z5K');
+</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Business Central Integration: What Are the Options? | Declan Feely</title>
+        <meta name="description" content="Business Central integration options compared: REST APIs, custom AL APIs, OData, SOAP and Power Automate, plus the architecture questions that decide whether an integration holds up." />
+        <meta name="author" content="Declan Feely" />
+        <link rel="canonical" href="https://www.feelyconsultants.com/blog/business-central-integration-options.html" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Business Central Integration: What Are the Options? | Declan Feely" />
+        <meta property="og:description" content="Business Central integration options compared: REST APIs, custom AL APIs, OData, SOAP and Power Automate, plus the architecture questions that decide whether an integration holds up." />
+        <meta property="og:url" content="https://www.feelyconsultants.com/blog/business-central-integration-options.html" />
+        <meta property="og:image" content="https://www.feelyconsultants.com/assets/img/profile.jpg" />
+        <meta name="twitter:card" content="summary" />
+        <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Business Central Integration: What Are the Options?", "description": "Business Central integration options compared: REST APIs, custom AL APIs, OData, SOAP and Power Automate, plus the architecture questions that decide whether an integration holds up.", "datePublished": "2026-11-13", "dateModified": "2026-11-13", "author": {"@type": "Person", "name": "Declan Feely", "url": "https://www.feelyconsultants.com/"}, "publisher": {"@type": "Organization", "name": "Feely Software Consultants", "url": "https://www.feelyconsultants.com/"}, "mainEntityOfPage": "https://www.feelyconsultants.com/blog/business-central-integration-options.html"}</script>
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand" href="../index.html">
+                <span class="d-block d-lg-none">Declan Feely</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../assets/img/profile.jpg" alt="Declan Feely" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#erp">ERP &amp; Enterprise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#engineering">Software Engineering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#data-ai">Data &amp; AI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../blog/index.html">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid p-0">
+            <section class="resume-section blog-section" id="post">
+                <div class="resume-section-content">
+                    <article class="post-body">
+                        <p class="post-meta mb-3"><a href="index.html">&larr; All articles</a></p>
+                        <h1 class="mb-2">Business Central Integration: What Are the Options?</h1>
+                        <div class="post-meta mb-4">By Declan Feely · <time datetime="2026-11-13">13 November 2026</time></div>
+
+<p class="lead">Microsoft Dynamics 365 Business Central rarely operates in isolation. It usually has to exchange data with CRM, ecommerce, banking, payroll, warehouse, payment and reporting systems, and the hard part is deciding how each connection should work. Microsoft recommends the REST API stack for connecting external applications, while OData and SOAP web services remain supported (<a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/integration-overview" target="_blank" rel="noopener">Microsoft Learn</a>).</p>
+
+<h2>What is Business Central integration?</h2>
+<p>Integration means connecting Business Central to another application so that information moves between the two automatically. The usual goals are less duplicate data entry, better data accuracy and business processes that span applications. Four typical flows:</p>
+<ul>
+<li><strong>CRM to Business Central:</strong> a customer created in CRM is synchronised into Business Central.</li>
+<li><strong>Business Central to CRM:</strong> financial or order information is made available to customer-facing teams.</li>
+<li><strong>Website to Business Central:</strong> an online order creates a sales order.</li>
+<li><strong>Business Central to a data warehouse:</strong> financial and operational data is extracted for reporting and analytics.</li>
+</ul>
+
+<h2>The main integration options</h2>
+
+<h3>REST APIs</h3>
+<p>REST APIs are the preferred approach for modern Business Central integrations. Business Central ships with built-in APIs and also supports custom APIs built with AL API pages and API queries. They suit any application that needs to exchange structured data with Business Central: CRM, ecommerce, customer portals, payment systems, data services and custom business applications.</p>
+
+<h3>Custom Business Central APIs</h3>
+<p>Standard APIs do not always expose exactly the data another application needs. In that case a custom API can be developed in AL, and the choice of object matters:</p>
+<ul>
+<li><strong>API page:</strong> for read and write operations, such as an external application creating or updating records.</li>
+<li><strong>API query:</strong> for read-only joined or aggregated data, such as a reporting feed that combines several tables.</li>
+</ul>
+
+<h3>OData</h3>
+<p>Business Central also supports OData web services, which expose pages and queries. OData remains useful in existing integrations and reporting scenarios, but REST is the recommended method for new work.</p>
+
+<h3>SOAP</h3>
+<p>SOAP has been part of the Dynamics NAV and Business Central ecosystem for many years and still turns up in older integrations. When you design something new, review the architecture rather than automatically reproducing an older SOAP-based approach.</p>
+
+<h2>Business Central and Power Automate</h2>
+<p>Power Automate fits when an integration is mainly a workflow. For example: a purchase order exceeds &euro;10,000, an approval is requested, a manager is notified and Business Central is updated. Business Central integrates with the wider Power Platform, including Power Automate, Power Apps and Power BI.</p>
+<p>It works well for approvals, notifications, workflow automation, lightweight integrations, document processes, business events and Microsoft 365 integration. It is not necessarily the right answer for high-volume or highly complex integrations.</p>
+
+<h2>Business Central and CRM integration</h2>
+<p>CRM and ERP integration is one of the most common requirements, and it only stays maintainable if each piece of data has one owner. A Dynamics 365 CRM environment typically manages leads, opportunities, contacts, accounts and sales activities. Business Central manages customers, sales orders, invoices, payments, credit notes and financial transactions.</p>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr><th scope="col">Data</th><th scope="col">System of record</th></tr>
+</thead>
+<tbody>
+<tr><td>Sales opportunity</td><td>CRM</td></tr>
+<tr><td>Sales activity</td><td>CRM</td></tr>
+<tr><td>Customer financial account</td><td>Business Central</td></tr>
+<tr><td>Sales order</td><td>Business Central</td></tr>
+<tr><td>Invoice</td><td>Business Central</td></tr>
+<tr><td>Payment</td><td>Business Central</td></tr>
+</tbody>
+</table>
+</div>
+<p>Without this agreement, integrations become hard to maintain. For a deeper look at this scenario, see <a href="business-central-crm-integration.html">Connecting Dynamics 365 CRM and Business Central: An Integration Guide</a>.</p>
+
+<h2>Integration architecture: the questions that matter</h2>
+<p>A robust integration is more than moving data from A to B. These questions are often more important than the choice of API technology:</p>
+<ul>
+<li><strong>Data ownership:</strong> which system owns the data?</li>
+<li><strong>Direction:</strong> one-way, two-way, event-driven or scheduled?</li>
+<li><strong>Frequency:</strong> real time, every few minutes, hourly or daily?</li>
+<li><strong>Volume:</strong> how many records are transferred?</li>
+<li><strong>Failure handling:</strong> what happens when Business Central rejects a transaction?</li>
+<li><strong>Idempotency:</strong> what happens if the same message is sent twice?</li>
+<li><strong>Monitoring:</strong> how will failed integrations be identified?</li>
+<li><strong>Security:</strong> how will authentication and authorisation be managed?</li>
+<li><strong>Reconciliation:</strong> how do you prove both systems hold the expected data?</li>
+</ul>
+
+<h2>When a custom integration is required</h2>
+<p>Standard connectors are useful, but they do not solve every problem. A custom integration is usually needed when:</p>
+<ul>
+<li>The external system has a proprietary API.</li>
+<li>Business Central holds customised data.</li>
+<li>Standard APIs do not expose the required information.</li>
+<li>Complex transformation rules apply.</li>
+<li>Several systems take part in one process.</li>
+<li>Data must be validated before it enters Business Central.</li>
+<li>Legacy integrations need to be replaced.</li>
+</ul>
+<p>Such a solution can combine Business Central APIs, AL development, Azure services, Power Automate, SQL and ETL.</p>
+
+<h3>Common problems</h3>
+<p>The usual culprits are duplicate customers, failed API calls, incorrect mappings, missing dimensions, timeouts, authentication failures, inconsistent master data, duplicate transactions, poor error handling, no reconciliation process and legacy integrations nobody can maintain.</p>
+<p>A technical integration can work while the business process still fails. An API can successfully create a sales order that carries the wrong customer, dimension or price. That is why integration testing has to validate the business result, not just whether an HTTP request returned successfully.</p>
+
+<h2>Choosing the right approach</h2>
+<p>No single technology fits every scenario. The right design depends on the data, the process, the volume, the reliability required and the systems involved.</p>
+<div class="table-responsive">
+<table class="table table-bordered">
+<thead>
+<tr><th scope="col">Approach</th><th scope="col">Best suited to</th></tr>
+</thead>
+<tbody>
+<tr><td>REST API</td><td>Modern application-to-application integration</td></tr>
+<tr><td>Custom API</td><td>Standard endpoints do not expose the data or operations needed</td></tr>
+<tr><td>Power Automate</td><td>Workflow and lower-complexity automation</td></tr>
+<tr><td>OData</td><td>Suitable existing or reporting-oriented scenarios</td></tr>
+<tr><td>Azure / integration services</td><td>More complex enterprise integration requirements</td></tr>
+<tr><td>ETL / data platform</td><td>High-volume analytical and reporting requirements</td></tr>
+</tbody>
+</table>
+</div>
+
+                        <hr class="my-5" />
+                        <h2 class="h4">Need help with a Business Central integration?</h2>
+                        <p>A Business Central integration should be designed around the business process, not just two APIs. I have worked across Business Central, Dynamics CRM, ERP integrations, REST APIs, Power Automate, ETL, Azure, SQL and enterprise reporting, including data flows between CRM, ERP and reporting environments. If you need to connect Business Central to CRM, an external application, a website, Power Platform or a data platform, get in touch at <a href="mailto:declan@feelyconsultants.com">declan@feelyconsultants.com</a> or find me on <a href="https://www.linkedin.com/in/declanfeely/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+                        <h2 class="h4 mt-5">More articles</h2>
+                        <ul>
+                        <li><a href="business-central-crm-integration.html">Connecting Dynamics 365 CRM and Business Central: An Integration Guide</a></li>
+                        <li><a href="integra-finance-to-business-central-data-migration.html">Integra Finance to Business Central: A Practical Data Migration Approach</a></li>
+                        <li><a href="dynamics-ax-2012-to-dynamics-365-finance-operations.html">Dynamics AX 2012 to Dynamics 365 Finance and Operations: How to Plan the Move</a></li>
+                        <li><a href="erp-data-migration-approach.html">ERP Data Migration: A Practical Approach That Holds Up at Go-Live</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>
