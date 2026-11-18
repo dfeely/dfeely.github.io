@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 284" width="960" height="284" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Fit-gap ladder for Dynamics 365 Business Central</title><desc id="d">Configure standard first, then Power Platform, then an AppSource app, then a per-tenant extension. Cost, effort and upgrade risk rise at each step. Editing the base app is not available in SaaS.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="284" fill="#ffffff"/>
+<rect x="10.0" y="40" width="170" height="120" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="95.0" y="84.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Configure</text>
+<text x="95.0" y="110.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Setup, templates</text>
+<text x="95.0" y="128.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">and features</text>
+<circle cx="26.0" cy="56" r="12" fill="#1f4e9c"/>
+<text x="26.0" y="61" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<line x1="182.0" y1="100" x2="200.5" y2="100" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="202.5" y="40" width="170" height="120" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="287.5" y="84.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Power Platform</text>
+<text x="287.5" y="110.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Power Automate,</text>
+<text x="287.5" y="128.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Power Apps, Power BI</text>
+<circle cx="218.5" cy="56" r="12" fill="#1f4e9c"/>
+<text x="218.5" y="61" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<line x1="374.5" y1="100" x2="393.0" y2="100" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="395.0" y="40" width="170" height="120" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="480.0" y="84.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">AppSource app</text>
+<text x="480.0" y="110.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">A proven partner</text>
+<text x="480.0" y="128.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">solution</text>
+<circle cx="411.0" cy="56" r="12" fill="#1f4e9c"/>
+<text x="411.0" y="61" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<line x1="567.0" y1="100" x2="585.5" y2="100" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="587.5" y="40" width="170" height="120" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="672.5" y="74.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">Per-tenant</text>
+<text x="672.5" y="94.0" font-size="16" font-weight="700" fill="#1f4e9c" text-anchor="middle">extension</text>
+<text x="672.5" y="120.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">AL code built</text>
+<text x="672.5" y="138.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">for you</text>
+<circle cx="603.5" cy="56" r="12" fill="#1f4e9c"/>
+<text x="603.5" y="61" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<line x1="759.5" y1="100" x2="778.0" y2="100" stroke="#1f4e9c" stroke-width="2" marker-end="url(#a)"/>
+<rect x="780.0" y="40" width="170" height="120" rx="10" fill="#fdf1e3" stroke="#b45309" stroke-width="1.5"/>
+<text x="865.0" y="84.0" font-size="16" font-weight="700" fill="#b45309" text-anchor="middle">Base app edits</text>
+<text x="865.0" y="110.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Not available</text>
+<text x="865.0" y="128.0" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">in SaaS</text>
+<line x1="800.0" y1="60" x2="930.0" y2="140" stroke="#b45309" stroke-width="2" opacity="0.55"/>
+<path d="M20,188 L760,188" fill="none" stroke="#5c6670" stroke-width="2" marker-end="url(#a)"/>
+<rect x="255.0" y="176" width="270" height="24" rx="12" fill="#ffffff" stroke="#b7c6e0"/><text x="390" y="192.5" font-size="12.5" font-weight="600" fill="#5c6670" text-anchor="middle">Cost, effort and upgrade risk rise</text>
+<rect x="10" y="220" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="247.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">Take the lowest rung that meets the requirement, and record why.</text>
+</svg>

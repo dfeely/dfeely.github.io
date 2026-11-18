@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 374" width="960" height="374" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">How Irish requirements are delivered in Business Central</title><desc id="d">Business Central for Ireland runs on the Microsoft W1 base app. A partner localisation app adds Irish VAT3 reporting, reverse charge treatment, VAT records and Eircode and county conventions. Company-specific logic sits on top as per-tenant extensions. Anything relying on GB-based assumptions should be checked.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="374" fill="#ffffff"/>
+<rect x="10" y="20" width="620" height="84" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="320" y="54" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="middle">Your per-tenant extensions</text>
+<text x="320" y="80" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Company-specific logic, custom APIs and reports</text>
+<rect x="10" y="116" width="620" height="84" rx="10" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="320" y="150" font-size="17" font-weight="700" fill="#1f4e9c" text-anchor="middle">Partner localisation app</text>
+<text x="320" y="176" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Irish VAT3 reporting, reverse charge, VAT records, Eircode</text>
+<text x="320" y="192" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">and county address conventions</text>
+<rect x="10" y="212" width="620" height="84" rx="10" fill="#1f4e9c" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="320" y="246" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Microsoft W1 base app</text>
+<text x="320" y="272" font-size="13.5" font-weight="400" fill="#ffffff" text-anchor="middle">Core finance, sales, purchasing and inventory</text>
+<rect x="660" y="20" width="290" height="276" rx="12" fill="#fdf1e3" stroke="#b45309" stroke-width="1.5"/>
+<text x="805" y="54" font-size="18" font-weight="700" fill="#b45309" text-anchor="middle">Ireland (IE)</text>
+<text x="805" y="90" font-size="14.5" font-weight="400" fill="#212529" text-anchor="middle">Localised by a partner,</text>
+<text x="805" y="114" font-size="14.5" font-weight="400" fill="#212529" text-anchor="middle">on the W1 base app.</text>
+<text x="805" y="138" font-size="14.5" font-weight="400" fill="#212529" text-anchor="middle"></text>
+<text x="805" y="162" font-size="14.5" font-weight="400" fill="#212529" text-anchor="middle">Check for anything</text>
+<text x="805" y="186" font-size="14.5" font-weight="400" fill="#212529" text-anchor="middle">still relying on</text>
+<text x="805" y="210" font-size="14.5" font-weight="400" fill="#212529" text-anchor="middle">GB-based assumptions.</text>
+<rect x="10" y="320" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="347.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">Irish compliance is delivered by a partner layer, so choose and test it as carefully as the ERP.</text>
+</svg>
