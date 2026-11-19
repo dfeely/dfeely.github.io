@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 336" width="960" height="336" role="img" aria-labelledby="t d" font-family="Muli, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Matching each data flow to the right timing</title><desc id="d">Real time: stock check, payment authorisation, tax and shipping quote. Near real time and queued: order into F&amp;O, new customer, order status. Scheduled batch: product catalogue, price lists, invoices and balances.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f4e9c"/></marker></defs>
+<rect width="960" height="336" fill="#ffffff"/>
+<rect x="10" y="20" width="304" height="240" rx="12" fill="#fdf1e3" stroke="#b45309" stroke-width="1.5"/>
+<text x="162" y="54" font-size="18" font-weight="700" fill="#b45309" text-anchor="middle">Real time</text>
+<text x="162" y="78" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Needed while the shopper waits</text>
+<rect x="52.0" y="108" width="220" height="24" rx="12" fill="#ffffff" stroke="#b45309"/><text x="162" y="124.5" font-size="12.5" font-weight="600" fill="#b45309" text-anchor="middle">Stock check</text>
+<rect x="52.0" y="154" width="220" height="24" rx="12" fill="#ffffff" stroke="#b45309"/><text x="162" y="170.5" font-size="12.5" font-weight="600" fill="#b45309" text-anchor="middle">Payment authorisation</text>
+<rect x="52.0" y="200" width="220" height="24" rx="12" fill="#ffffff" stroke="#b45309"/><text x="162" y="216.5" font-size="12.5" font-weight="600" fill="#b45309" text-anchor="middle">Tax and shipping quote</text>
+<rect x="328" y="20" width="304" height="240" rx="12" fill="#e6f4ec" stroke="#1b7f4b" stroke-width="1.5"/>
+<text x="480" y="54" font-size="18" font-weight="700" fill="#1b7f4b" text-anchor="middle">Near real time, queued</text>
+<text x="480" y="78" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Within seconds or minutes</text>
+<rect x="370.0" y="108" width="220" height="24" rx="12" fill="#ffffff" stroke="#1b7f4b"/><text x="480" y="124.5" font-size="12.5" font-weight="600" fill="#1b7f4b" text-anchor="middle">Order into F&amp;O</text>
+<rect x="370.0" y="154" width="220" height="24" rx="12" fill="#ffffff" stroke="#1b7f4b"/><text x="480" y="170.5" font-size="12.5" font-weight="600" fill="#1b7f4b" text-anchor="middle">New customer</text>
+<rect x="370.0" y="200" width="220" height="24" rx="12" fill="#ffffff" stroke="#1b7f4b"/><text x="480" y="216.5" font-size="12.5" font-weight="600" fill="#1b7f4b" text-anchor="middle">Order status</text>
+<rect x="646" y="20" width="304" height="240" rx="12" fill="#e8eef8" stroke="#1f4e9c" stroke-width="1.5"/>
+<text x="798" y="54" font-size="18" font-weight="700" fill="#1f4e9c" text-anchor="middle">Scheduled batch</text>
+<text x="798" y="78" font-size="13.5" font-weight="400" fill="#212529" text-anchor="middle">Hourly, nightly or on change</text>
+<rect x="688.0" y="108" width="220" height="24" rx="12" fill="#ffffff" stroke="#1f4e9c"/><text x="798" y="124.5" font-size="12.5" font-weight="600" fill="#1f4e9c" text-anchor="middle">Product catalogue</text>
+<rect x="688.0" y="154" width="220" height="24" rx="12" fill="#ffffff" stroke="#1f4e9c"/><text x="798" y="170.5" font-size="12.5" font-weight="600" fill="#1f4e9c" text-anchor="middle">Price lists</text>
+<rect x="688.0" y="200" width="220" height="24" rx="12" fill="#ffffff" stroke="#1f4e9c"/><text x="798" y="216.5" font-size="12.5" font-weight="600" fill="#1f4e9c" text-anchor="middle">Invoices and balances</text>
+<rect x="10" y="282" width="940" height="44" rx="10" fill="#e8eef8"/><text x="480.0" y="309.0" font-size="15" font-weight="600" fill="#1f4e9c" text-anchor="middle">Real time everywhere is expensive and fragile. Match the timing to the business need.</text>
+</svg>
