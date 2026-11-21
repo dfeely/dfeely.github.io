@@ -11015,3 +11015,15 @@ section.resume-section .resume-section-content {
 
 .post-body h1 { overflow-wrap: break-word; }
 @media (max-width: 575.98px) { .post-body h1 { font-size: 2.1rem; } }
+
+/* SEO homepage H1: keyword-rich heading at a readable size */
+.h1-seo {
+  font-size: calc(1.6rem + 2.4vw);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .h1-seo {
+    font-size: 4rem;
+  }
+}
